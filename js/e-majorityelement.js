@@ -9,15 +9,21 @@
 //
 // Time: O(n), Space: O(1)
 function majorityElement(nums) {
-  let count = 0;
-  let candidate = null;
+  let major = nums[0];
+  let count = 1;
 
-  for (const n of nums) {
-    if (count === 0) candidate = n;
-    count += n === candidate ? 1 : -1;
+  for (let i = 1; i < nums.length; i++) {
+    if (count === 0) {
+      count++;
+      major = nums[i];
+    } else if (major === nums[i]) {
+      count++;
+    } else {
+      count--;
+    }
   }
 
-  return candidate;
+  return major;
 }
 
 console.log(majorityElement([2, 2, 1, 1, 1, 2, 2])); // 2

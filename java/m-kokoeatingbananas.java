@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 // Koko Eating Bananas
 // Find the minimum eating speed to finish all banana piles within h hours.
 //
@@ -13,7 +11,10 @@ import java.util.Arrays;
 class KokoEatingBananas {
     public static int minEatingSpeed(int[] piles, int h) {
         int lo = 1;
-        int hi = Arrays.stream(piles).max().getAsInt();
+        int hi = 0;
+        for (int p : piles) {
+            if (p > hi) hi = p;
+        }
 
         while (lo < hi) {
             int mid = (lo + hi) / 2;

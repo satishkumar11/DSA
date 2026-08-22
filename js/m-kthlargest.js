@@ -16,11 +16,11 @@ function findKthLargest(nums, k) {
     let i = lo;
     for (let j = lo; j < hi; j++) {
       if (nums[j] < pivot) {
-        [nums[i], nums[j]] = [nums[j], nums[i]];
+        swap(nums, i, j);
         i++;
       }
     }
-    [nums[i], nums[hi]] = [nums[hi], nums[i]];
+    swap(nums, i, hi);
     return i;
   }
 
@@ -32,6 +32,12 @@ function findKthLargest(nums, k) {
     if (p < target) lo = p + 1;
     else hi = p - 1;
   }
+}
+
+function swap(nums, i, j) {
+  const temp = nums[i];
+  nums[i] = nums[j];
+  nums[j] = temp;
 }
 
 console.log(findKthLargest([3, 2, 1, 5, 6, 4], 2)); // 5

@@ -19,7 +19,11 @@ function nextGreaterElement(nums1, nums2) {
     stack.push(n);
   }
 
-  return nums1.map((n) => (map.has(n) ? map.get(n) : -1));
+  const result = [];
+  for (const n of nums1) {
+    result.push(map.has(n) ? map.get(n) : -1);
+  }
+  return result;
 }
 
 console.log(nextGreaterElement([4, 1, 2], [1, 3, 4, 2])); // [-1,3,-1]

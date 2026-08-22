@@ -19,7 +19,10 @@ function isAnagram(s, t) {
     counts[t.charCodeAt(i) - base]--;
   }
 
-  return counts.every((c) => c === 0);
+  for (const c of counts) {
+    if (c !== 0) return false;
+  }
+  return true;
 }
 
 console.log(isAnagram('anagram', 'nagaram')); // true

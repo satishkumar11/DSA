@@ -21,12 +21,19 @@ function findAnagrams(s, p) {
   for (let i = 0; i < s.length; i++) {
     window[s.charCodeAt(i) - base]++;
     if (i >= p.length) window[s.charCodeAt(i - p.length) - base]--;
-    if (i >= p.length - 1 && need.every((v, idx) => v === window[idx])) {
+    if (i >= p.length - 1 && countsMatch(need, window)) {
       result.push(i - p.length + 1);
     }
   }
 
   return result;
+}
+
+function countsMatch(need, window) {
+  for (let i = 0; i < need.length; i++) {
+    if (need[i] !== window[i]) return false;
+  }
+  return true;
 }
 
 console.log(findAnagrams('cbaebabacd', 'abc')); // [0, 6]

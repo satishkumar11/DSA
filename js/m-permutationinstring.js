@@ -20,10 +20,17 @@ function checkInclusion(s1, s2) {
   for (let i = 0; i < s2.length; i++) {
     window[s2.charCodeAt(i) - base]++;
     if (i >= s1.length) window[s2.charCodeAt(i - s1.length) - base]--;
-    if (i >= s1.length - 1 && need.every((v, idx) => v === window[idx])) return true;
+    if (i >= s1.length - 1 && countsMatch(need, window)) return true;
   }
 
   return false;
+}
+
+function countsMatch(need, window) {
+  for (let i = 0; i < need.length; i++) {
+    if (need[i] !== window[i]) return false;
+  }
+  return true;
 }
 
 console.log(checkInclusion('ab', 'eidbaooo')); // true

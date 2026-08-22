@@ -9,7 +9,11 @@
 //
 // Time: O(log(min(m, n))), Space: O(1)
 function findMedianSortedArrays(nums1, nums2) {
-  if (nums1.length > nums2.length) [nums1, nums2] = [nums2, nums1];
+  if (nums1.length > nums2.length) {
+    const temp = nums1;
+    nums1 = nums2;
+    nums2 = temp;
+  }
   const m = nums1.length;
   const n = nums2.length;
   let lo = 0;

@@ -10,14 +10,20 @@
 // Time: O(n), Space: O(1)
 class MajorityElement {
     public static int majorityElement(int[] nums) {
-        int count = 0, candidate = 0;
+        int major = nums[0], count = 1;
 
-        for (int n : nums) {
-            if (count == 0) candidate = n;
-            count += (n == candidate) ? 1 : -1;
+        for (int i = 1; i < nums.length; i++) {
+            if (count == 0) {
+                count++;
+                major = nums[i];
+            } else if (major == nums[i]) {
+                count++;
+            } else {
+                count--;
+            }
         }
 
-        return candidate;
+        return major;
     }
 
     public static void main(String[] args) {

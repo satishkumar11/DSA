@@ -25,7 +25,10 @@ class TreeNode {
 
 function invertTree(root) {
   if (!root) return null;
-  [root.left, root.right] = [invertTree(root.right), invertTree(root.left)];
+  const left = invertTree(root.left);
+  const right = invertTree(root.right);
+  root.left = right;
+  root.right = left;
   return root;
 }
 

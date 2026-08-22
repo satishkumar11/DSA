@@ -13,7 +13,9 @@ function rob(nums) {
   let cur = 0;
 
   for (const n of nums) {
-    [prev, cur] = [cur, Math.max(cur, prev + n)];
+    const best = Math.max(cur, prev + n);
+    prev = cur;
+    cur = best;
   }
 
   return cur;
