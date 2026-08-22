@@ -10,13 +10,20 @@ a two-line description of the approach used, and its time/space complexity.
 See [deloitte-interview-prep.md](deloitte-interview-prep.md) for the research behind this list —
 sourced from GeeksforGeeks, DSAPrep.dev, and real Deloitte interview threads on LeetCode Discuss.
 
+## To Revisit 🔁
+
+Problems flagged for another pass before the interview.
+
+- [Merge Sorted Array](js/e-mergesortedarray.js) ([java](java/e-mergesortedarray.java))
+- [Remove Duplicates from Sorted Array](js/e-removeduplicates.js) ([java](java/e-removeduplicates.java))
+
 ## Easy (30)
 
 | # | Problem | JavaScript | Java |
 |---|---|---|---|
 | 1 | Two Sum | [e-2sum.js](js/e-2sum.js) | [e-2sum.java](java/e-2sum.java) |
 | 2 | Valid Anagram | [e-validanagram.js](js/e-validanagram.js) | [e-validanagram.java](java/e-validanagram.java) |
-| 3 | Remove Duplicates from Sorted Array | [e-removeduplicates.js](js/e-removeduplicates.js) | [e-removeduplicates.java](java/e-removeduplicates.java) |
+| 3 | Remove Duplicates from Sorted Array 🔁 | [e-removeduplicates.js](js/e-removeduplicates.js) | [e-removeduplicates.java](java/e-removeduplicates.java) |
 | 4 | Second Largest Element in an Array | [e-secondlargest.js](js/e-secondlargest.js) | [e-secondlargest.java](java/e-secondlargest.java) |
 | 5 | Best Time to Buy and Sell Stock | [e-besttimetobuysell.js](js/e-besttimetobuysell.js) | [e-besttimetobuysell.java](java/e-besttimetobuysell.java) |
 | 6 | Valid Parentheses | [e-validparentheses.js](js/e-validparentheses.js) | [e-validparentheses.java](java/e-validparentheses.java) |
@@ -32,7 +39,7 @@ sourced from GeeksforGeeks, DSAPrep.dev, and real Deloitte interview threads on 
 | 16 | Contains Duplicate | [e-containsduplicate.js](js/e-containsduplicate.js) | [e-containsduplicate.java](java/e-containsduplicate.java) |
 | 17 | Majority Element | [e-majorityelement.js](js/e-majorityelement.js) | [e-majorityelement.java](java/e-majorityelement.java) |
 | 18 | Move Zeroes | [e-movezeroes.js](js/e-movezeroes.js) | [e-movezeroes.java](java/e-movezeroes.java) |
-| 19 | Merge Sorted Array | [e-mergesortedarray.js](js/e-mergesortedarray.js) | [e-mergesortedarray.java](java/e-mergesortedarray.java) |
+| 19 | Merge Sorted Array 🔁 | [e-mergesortedarray.js](js/e-mergesortedarray.js) | [e-mergesortedarray.java](java/e-mergesortedarray.java) |
 | 20 | Missing Number | [e-missingnumber.js](js/e-missingnumber.js) | [e-missingnumber.java](java/e-missingnumber.java) |
 | 21 | Valid Palindrome | [e-validpalindrome.js](js/e-validpalindrome.js) | [e-validpalindrome.java](java/e-validpalindrome.java) |
 | 22 | Maximum Average Subarray I | [e-maxaveragesubarray.js](js/e-maxaveragesubarray.js) | [e-maxaveragesubarray.java](java/e-maxaveragesubarray.java) |

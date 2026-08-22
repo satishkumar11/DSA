@@ -1,6 +1,5 @@
-import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.Deque;
+import java.util.Stack;
 
 // Daily Temperatures
 // For each day, find how many days until a warmer temperature.
@@ -14,15 +13,20 @@ import java.util.Deque;
 // Time: O(n), Space: O(n)
 class DailyTemperatures {
     public static int[] dailyTemperatures(int[] temperatures) {
+        Stack<Integer> stack = new Stack<>();
         int[] result = new int[temperatures.length];
-        Deque<Integer> stack = new ArrayDeque<>();
 
         for (int i = 0; i < temperatures.length; i++) {
-            while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
-                int idx = stack.pop();
-                result[idx] = i - idx;
+            while (!stack.isEmpty() && temperatures[stack.peek()] < temperatures[i]) {
+                int index = stack.pop();
+                result[index] = i - index;
             }
-            stack.push(i);
+            stack.add(i);
+        }
+
+        while (!stack.isEmpty()) {
+            int index = stack.pop();
+            result[index] = 0;
         }
 
         return result;
