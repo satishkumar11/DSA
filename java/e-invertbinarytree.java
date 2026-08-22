@@ -1,5 +1,7 @@
 // Invert Binary Tree
 // Swap every left and right child to mirror a binary tree.
+// Recursively invert both subtrees, then swap the left and right
+// child pointers at the current node.
 // Time: O(n), Space: O(h)
 class InvertBinaryTree {
     static class TreeNode {

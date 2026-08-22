@@ -1,5 +1,7 @@
 // Longest Palindromic Substring
 // Find the longest substring that reads the same forwards and backwards.
+// Expand around every possible center (both single and double character)
+// and track the widest palindrome found.
 // Time: O(n^2), Space: O(1)
 class LongestPalindrome {
     private static String s;

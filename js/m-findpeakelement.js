@@ -1,5 +1,7 @@
 // Find Peak Element
 // Find an index whose value is greater than both its neighbors.
+// Binary search that always moves toward the side with a larger
+// neighbor, since that side is guaranteed to contain a peak.
 // Time: O(log n), Space: O(1)
 function findPeakElement(nums) {
   let lo = 0;

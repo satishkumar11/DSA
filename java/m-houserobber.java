@@ -1,5 +1,7 @@
 // House Robber
 // Find the maximum money that can be robbed from houses in a row without robbing two adjacent ones.
+// At each house, decide the best of two options: skip it (keep previous
+// best) or rob it (previous-previous best plus this house's value).
 // Time: O(n), Space: O(1)
 class HouseRobber {
     public static int rob(int[] nums) {

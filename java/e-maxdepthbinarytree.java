@@ -1,5 +1,7 @@
 // Maximum Depth of Binary Tree
 // Find the number of nodes along the longest path from root to a leaf.
+// Recursively return 1 plus the larger of the left and right subtree
+// depths, bottoming out at 0 for a null node.
 // Time: O(n), Space: O(h)
 class MaxDepthBinaryTree {
     static class TreeNode {

@@ -1,5 +1,7 @@
 // Second Largest Element in an Array
 // Find the second largest distinct value in an array.
+// Track the largest and second-largest values seen so far in one pass,
+// updating both whenever a new maximum is found.
 // Time: O(n), Space: O(1)
 class SecondLargest {
     public static int secondLargest(int[] nums) {

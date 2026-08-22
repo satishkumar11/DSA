@@ -6,6 +6,8 @@ import java.util.Map;
 
 // Next Greater Element I
 // For each element in one array, find its next greater element in another array.
+// Monotonic decreasing stack over nums2 to precompute each value's next
+// greater element in a map, then look up answers for nums1 from that map.
 // Time: O(n + m), Space: O(n)
 class NextGreaterElement {
     public static int[] nextGreaterElement(int[] nums1, int[] nums2) {

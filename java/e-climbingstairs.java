@@ -1,5 +1,7 @@
 // Climbing Stairs
 // Count the number of distinct ways to climb n stairs taking 1 or 2 steps at a time.
+// The number of ways to reach step n is the sum of ways to reach step
+// n-1 and step n-2, so track just those two running values (Fibonacci).
 // Time: O(n), Space: O(1)
 class ClimbingStairs {
     public static int climbStairs(int n) {

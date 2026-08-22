@@ -1,5 +1,7 @@
 // Linked List Cycle
 // Determine whether a linked list contains a cycle.
+// Floyd's tortoise and hare: advance a slow pointer by one and a fast
+// pointer by two; they meet only if the list contains a cycle.
 // Time: O(n), Space: O(1)
 class ListNode {
   constructor(val, next = null) {

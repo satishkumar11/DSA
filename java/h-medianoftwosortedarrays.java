@@ -1,5 +1,7 @@
 // Median of Two Sorted Arrays
 // Find the median of two sorted arrays in logarithmic time.
+// Binary search a partition point in the smaller array so that the
+// combined left half and right half of both arrays are balanced and ordered.
 // Time: O(log(min(m, n))), Space: O(1)
 class MedianOfTwoSortedArrays {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {

@@ -1,5 +1,7 @@
 // Kth Largest Element in a Stream
 // Design a class that tracks the kth largest element as numbers are added one at a time.
+// Maintain a min-heap capped at size k as values stream in; the heap's
+// smallest element is always the current kth largest.
 // add: O(k) with array approach (use a real heap for O(log k) in production)
 class KthLargest {
   constructor(k, nums) {

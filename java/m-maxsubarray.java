@@ -1,5 +1,7 @@
 // Maximum Subarray
 // Find the contiguous subarray with the largest sum (Kadane's algorithm).
+// Kadane's algorithm: at each index, either extend the previous subarray
+// or start fresh, keeping whichever running sum is larger.
 // Time: O(n), Space: O(1)
 class MaxSubarray {
     public static int maxSubArray(int[] nums) {

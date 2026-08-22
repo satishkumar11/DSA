@@ -1,5 +1,7 @@
 // Flood Fill
 // Recolor a connected region of a 2D image starting from a given pixel.
+// DFS from the starting pixel, recoloring every connected pixel that
+// matches the original color before the fill began.
 // Time: O(rows * cols), Space: O(rows * cols)
 function floodFill(image, sr, sc, color) {
   const startColor = image[sr][sc];

@@ -2,6 +2,8 @@ import java.util.*;
 
 // Top K Frequent Elements
 // Return the k most frequently occurring elements in an array.
+// Count each value's frequency, then keep a min-heap of size k so only
+// the k most frequent values survive by the end.
 // Time: O(n log k), Space: O(n)
 class TopKFrequent {
     public static int[] topKFrequent(int[] nums, int k) {

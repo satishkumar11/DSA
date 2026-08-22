@@ -1,5 +1,7 @@
 // Serialize and Deserialize Binary Tree
 // Convert a binary tree to a string and back to an identical tree.
+// Serialize via preorder traversal with explicit null markers, then
+// rebuild the tree by consuming that same token sequence in order.
 // Time: O(n), Space: O(n)
 class TreeNode {
   constructor(val, left = null, right = null) {

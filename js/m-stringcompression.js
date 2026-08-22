@@ -1,5 +1,7 @@
 // String Compression
 // Compress consecutive repeated characters in place using counts.
+// Two pointers: a read pointer counts runs of identical characters while
+// a write pointer overwrites the array in place with the char and its count.
 // Time: O(n), Space: O(1)
 function compress(chars) {
   let write = 0;

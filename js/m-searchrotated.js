@@ -1,5 +1,7 @@
 // Search in Rotated Sorted Array
 // Find a target's index in a sorted array that has been rotated at an unknown pivot.
+// Modified binary search: at each step, determine which half of the
+// array is sorted, then check if the target falls in that sorted half.
 // Time: O(log n), Space: O(1)
 function search(nums, target) {
   let lo = 0;

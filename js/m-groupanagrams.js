@@ -1,5 +1,7 @@
 // Group Anagrams
 // Group an array of strings into sets where every string in a set is an anagram of the others.
+// Sort each string's characters to build a canonical key, then group
+// original strings by that key in a hash map.
 // Time: O(n * k log k), Space: O(n * k)
 function groupAnagrams(strs) {
   const map = new Map();

@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 // Coin Change
 // Find the fewest number of coins needed to make up a given amount.
+// Bottom-up DP: for each amount from 1 to target, try every coin and take
+// the minimum coins needed using dp[amount - coin] + 1.
 // Time: O(amount * coins), Space: O(amount)
 class CoinChange {
     public static int coinChange(int[] coins, int amount) {

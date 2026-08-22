@@ -3,6 +3,8 @@ import java.util.List;
 
 // Combination Sum
 // Find all unique combinations of candidates (reusable) that sum to a target.
+// Backtracking with reuse allowed: at each step either include the
+// current candidate again or move on to the next one, until the target hits zero.
 // Time: O(2^target) worst case, Space: O(target)
 class CombinationSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {

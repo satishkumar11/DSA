@@ -1,5 +1,7 @@
 // Sliding Window Maximum
 // Return the maximum value in every sliding window of size k.
+// Maintain a monotonic decreasing deque of indices; the front always
+// holds the max of the current window, evicting stale or smaller values.
 // Time: O(n), Space: O(k)
 function maxSlidingWindow(nums, k) {
   const deque = []; // indices, values decreasing

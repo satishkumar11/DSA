@@ -1,5 +1,7 @@
 // Longest Common Prefix
 // Find the longest prefix shared by all strings in an array.
+// Start with the first string as the candidate prefix, then repeatedly
+// trim it until every other string starts with it.
 // Time: O(n * m), Space: O(1)
 function longestCommonPrefix(strs) {
   if (!strs.length) return '';

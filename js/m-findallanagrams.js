@@ -1,5 +1,7 @@
 // Find All Anagrams in a String
 // Find all starting indices of p's anagrams in s.
+// Sliding window of p's length over s, comparing 26-letter frequency
+// counts and recording every position where they match exactly.
 // Time: O(n), Space: O(1) (fixed 26-letter alphabet)
 function findAnagrams(s, p) {
   const result = [];

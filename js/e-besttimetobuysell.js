@@ -1,5 +1,7 @@
 // Best Time to Buy and Sell Stock
 // Find the maximum profit from a single buy and sell of one share.
+// Track the minimum price seen so far while scanning; at each day, check
+// the profit from selling at today's price against that minimum.
 // Time: O(n), Space: O(1)
 function maxProfit(prices) {
   let minPrice = Infinity;

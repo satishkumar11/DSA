@@ -1,5 +1,7 @@
 // Reverse Linked List
 // Reverse a singly linked list and return the new head.
+// Iterate through the list, reversing each node's next pointer to point
+// backward while carrying a running previous-node reference.
 // Time: O(n), Space: O(1)
 class ReverseLinkedList {
     static class ListNode {

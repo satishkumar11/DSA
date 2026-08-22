@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 // Flood Fill
 // Recolor a connected region of a 2D image starting from a given pixel.
+// DFS from the starting pixel, recoloring every connected pixel that
+// matches the original color before the fill began.
 // Time: O(rows * cols), Space: O(rows * cols)
 class FloodFill {
     public static int[][] floodFill(int[][] image, int sr, int sc, int color) {

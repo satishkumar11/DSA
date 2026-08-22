@@ -1,5 +1,7 @@
 // Same Tree
 // Determine if two binary trees are structurally identical with the same node values.
+// Recursively compare both trees node by node: values must match and
+// both children must recursively be the same tree.
 // Time: O(n), Space: O(h)
 class TreeNode {
   constructor(val, left = null, right = null) {

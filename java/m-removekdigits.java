@@ -3,6 +3,8 @@ import java.util.Deque;
 
 // Remove K Digits
 // Remove k digits from a number string to make it as small as possible.
+// Monotonic increasing stack: pop larger digits off the top whenever a
+// smaller digit arrives and removals remain, then trim leading zeros.
 // Time: O(n), Space: O(n)
 class RemoveKDigits {
     public static String removeKdigits(String num, int k) {

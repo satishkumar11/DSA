@@ -1,5 +1,7 @@
 // Clone Graph
 // Create a deep copy of a connected undirected graph.
+// DFS from the given node, using a map from original to clone to avoid
+// recreating (or infinitely revisiting) nodes already copied.
 // Time: O(V + E), Space: O(V)
 class Node {
   constructor(val, neighbors = []) {

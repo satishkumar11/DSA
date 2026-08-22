@@ -1,5 +1,7 @@
 // Merge k Sorted Lists
 // Merge k sorted linked lists into one sorted list.
+// Push every list's head into a min-heap; repeatedly pop the smallest
+// node, append it to the result, and push its successor back in.
 // Time: O(n log k), Space: O(1) excluding output
 class ListNode {
   constructor(val, next = null) {

@@ -1,5 +1,7 @@
 // Middle of the Linked List
 // Return the middle node of a singly linked list.
+// Slow and fast pointers: fast moves two nodes for every one the slow
+// pointer moves, so slow lands on the middle when fast reaches the end.
 // Time: O(n), Space: O(1)
 class ListNode {
   constructor(val, next = null) {

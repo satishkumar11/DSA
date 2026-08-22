@@ -4,6 +4,8 @@ import java.util.Deque;
 
 // Daily Temperatures
 // For each day, find how many days until a warmer temperature.
+// Monotonic decreasing stack of indices; whenever a warmer temperature
+// arrives, pop and resolve every colder day still waiting on the stack.
 // Time: O(n), Space: O(n)
 class DailyTemperatures {
     public static int[] dailyTemperatures(int[] temperatures) {
