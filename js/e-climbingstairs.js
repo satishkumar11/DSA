@@ -1,21 +1,31 @@
 // Climbing Stairs
 // Count the number of distinct ways to climb n stairs taking 1 or 2 steps at a time.
 //
-// The number of ways to reach step n is the sum of ways to reach step
-// n-1 and step n-2, so track just those two running values (Fibonacci).
+// Bottom-up DP array: ways(i) = ways(i-1) + ways(i-2), same recurrence as
+// Fibonacci, built iteratively so no recomputation is needed.
 //
-// Time: O(n), Space: O(1)
+// Time: O(n), Space: O(n)
 function climbStairs(n) {
-  if (n <= 2) return n;
-  let a = 1;
-  let b = 2;
-
-  for (let i = 3; i <= n; i++) {
-    [a, b] = [b, a + b];
-  }
-
-  return b;
+  return getWays(n);
 }
+
+function getWays(n) {
+  const DP = new Array(n + 2);
+  DP[0] = 1;
+  DP[1] = 1;
+
+  for (let i = 2; i <= n; i++) {
+    DP[i] = DP[i - 1] + DP[i - 2];
+  }
+  return DP[n];
+}
+
+// function getWays(n) {
+//   if (n <= 1) {
+//     return n;
+//   }
+//   return getWays(n - 1) + getWays(n - 2);
+// }
 
 console.log(climbStairs(5)); // 8
 
