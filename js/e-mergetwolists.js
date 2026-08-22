@@ -1,7 +1,9 @@
 // Merge Two Sorted Lists
 // Merge two sorted linked lists into one sorted list.
+//
 // Walk both lists together, always attaching the smaller head node to the
 // result, then append whichever list still has nodes left.
+//
 // Time: O(n + m), Space: O(1)
 class ListNode {
   constructor(val, next = null) {

@@ -1,7 +1,9 @@
 // Two Sum
 // Given an array of integers and a target, return the indices of the two numbers that add up to the target.
+//
 // Use a hash map to store each number's index as you scan the array.
 // For every element, check whether its complement (target - num) has already been seen.
+//
 // Time: O(n), Space: O(n)
 function twoSum(nums, target) {
   const seen = new Map(); // value -> index

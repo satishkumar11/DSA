@@ -2,8 +2,10 @@ import java.util.Arrays;
 
 // Remove Duplicates from Sorted Array
 // Remove duplicates in place from a sorted array and return the new length.
+//
 // Two pointers: a slow pointer marks the last unique value written, a fast
 // pointer scans ahead and copies in any new distinct value.
+//
 // Time: O(n), Space: O(1)
 class RemoveDuplicates {
     public static int removeDuplicates(int[] nums) {

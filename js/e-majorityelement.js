@@ -1,7 +1,9 @@
 // Majority Element
 // Find the element that appears more than n/2 times in an array.
+//
 // Boyer-Moore voting: keep a running candidate and a count, incrementing
 // on a match and decrementing otherwise; the true majority always survives.
+//
 // Time: O(n), Space: O(1)
 function majorityElement(nums) {
   let count = 0;

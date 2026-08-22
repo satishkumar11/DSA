@@ -1,7 +1,9 @@
 // Min Stack
 // Design a stack that supports push, pop, top, and retrieving the minimum in O(1).
+//
 // Maintain a parallel stack that tracks the running minimum at each
 // push, so getMin is always just a peek at its top.
+//
 class MinStack {
   constructor() {
     this.stack = [];

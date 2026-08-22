@@ -3,8 +3,10 @@ import java.util.Map;
 
 // LRU Cache
 // Design a fixed-capacity cache that evicts the least recently used item.
+//
 // Backed by an insertion-ordered map; every get/put re-inserts the key so
 // it becomes most recent, and overflow evicts the oldest entry.
+//
 // get/put: O(1) average
 class LRUCache extends LinkedHashMap<Integer, Integer> {
     private final int capacity;

@@ -1,7 +1,9 @@
 // Median of Two Sorted Arrays
 // Find the median of two sorted arrays in logarithmic time.
+//
 // Binary search a partition point in the smaller array so that the
 // combined left half and right half of both arrays are balanced and ordered.
+//
 // Time: O(log(min(m, n))), Space: O(1)
 function findMedianSortedArrays(nums1, nums2) {
   if (nums1.length > nums2.length) [nums1, nums2] = [nums2, nums1];

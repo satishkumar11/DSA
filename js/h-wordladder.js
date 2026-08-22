@@ -1,7 +1,9 @@
 // Word Ladder
 // Find the shortest transformation sequence length from one word to another, changing one letter at a time.
+//
 // BFS over words, generating every one-letter variation of the current
 // word at each step; BFS guarantees the shortest transformation path.
+//
 // Time: O(n * 26 * L), Space: O(n)
 function ladderLength(beginWord, endWord, wordList) {
   const wordSet = new Set(wordList);

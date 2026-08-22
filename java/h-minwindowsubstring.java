@@ -3,8 +3,10 @@ import java.util.Map;
 
 // Minimum Window Substring
 // Find the smallest substring of s that contains every character of t.
+//
 // Sliding window with a need/have character count; expand the right edge
 // until valid, then shrink the left edge to find the smallest valid window.
+//
 // Time: O(n + m), Space: O(charset)
 class MinWindowSubstring {
     public static String minWindow(String s, String t) {

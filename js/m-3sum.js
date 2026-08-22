@@ -1,7 +1,9 @@
 // 3Sum
 // Find all unique triplets in an array that sum to zero.
+//
 // Sort the array, fix one number, then use two pointers moving inward
 // from both ends to find pairs that complete the triplet to zero.
+//
 // Time: O(n^2), Space: O(1) excluding output
 function threeSum(nums) {
   nums.sort((a, b) => a - b);

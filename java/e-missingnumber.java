@@ -1,7 +1,9 @@
 // Missing Number
 // Find the missing number in an array containing n distinct numbers from 0 to n.
+//
 // XOR every index and every value together; all present pairs cancel out,
 // leaving only the missing number.
+//
 // Time: O(n), Space: O(1)
 class MissingNumber {
     public static int missingNumber(int[] nums) {

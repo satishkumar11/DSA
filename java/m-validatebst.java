@@ -1,7 +1,9 @@
 // Validate Binary Search Tree
 // Determine whether a binary tree satisfies the binary search tree property.
+//
 // Recursively validate each node against a shrinking (min, max) range
 // inherited from its ancestors, rather than just comparing to its parent.
+//
 // Time: O(n), Space: O(h)
 class ValidateBST {
     static class TreeNode {

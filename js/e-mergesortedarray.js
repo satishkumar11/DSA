@@ -1,7 +1,9 @@
 // Merge Sorted Array
 // Merge a second sorted array into the first, which has extra trailing space.
+//
 // Merge from the back: compare the largest remaining elements of both
 // arrays and place the bigger one at the end of nums1's true length.
+//
 // Time: O(m + n), Space: O(1)
 function merge(nums1, m, nums2, n) {
   let i = m - 1;

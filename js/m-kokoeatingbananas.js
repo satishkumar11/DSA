@@ -1,7 +1,9 @@
 // Koko Eating Bananas
 // Find the minimum eating speed to finish all banana piles within h hours.
+//
 // Binary search on the eating speed itself; for each candidate speed,
 // check whether all piles can be finished within h hours.
+//
 // Time: O(n log maxPile), Space: O(1)
 function minEatingSpeed(piles, h) {
   let lo = 1;

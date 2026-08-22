@@ -1,7 +1,9 @@
 // Lowest Common Ancestor of a Binary Tree
 // Find the lowest node that has both given nodes as descendants.
+//
 // Recurse into both subtrees; if one node is found in one subtree and the
 // other is found in the other subtree, the current node is the LCA.
+//
 // Time: O(n), Space: O(h)
 class TreeNode {
   constructor(val, left = null, right = null) {

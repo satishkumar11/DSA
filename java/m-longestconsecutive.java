@@ -3,8 +3,10 @@ import java.util.Set;
 
 // Longest Consecutive Sequence
 // Find the length of the longest run of consecutive integers in an unsorted array.
+//
 // Put all numbers in a set, then only start counting a streak from
 // numbers whose predecessor (n-1) is not in the set.
+//
 // Time: O(n), Space: O(n)
 class LongestConsecutive {
     public static int longestConsecutive(int[] nums) {

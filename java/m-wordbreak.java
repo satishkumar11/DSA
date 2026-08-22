@@ -4,8 +4,10 @@ import java.util.HashSet;
 
 // Word Break
 // Determine if a string can be segmented into a space-separated sequence of dictionary words.
+//
 // DP where dp[i] means the prefix of length i is breakable; dp[i] is true
 // if some earlier breakable point j has s[j:i] as a dictionary word.
+//
 // Time: O(n^2), Space: O(n)
 class WordBreak {
     public static boolean wordBreak(String s, List<String> wordDict) {

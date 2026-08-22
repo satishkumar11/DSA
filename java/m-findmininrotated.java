@@ -1,7 +1,9 @@
 // Find Minimum in Rotated Sorted Array
 // Find the minimum element in a sorted array that has been rotated.
+//
 // Binary search comparing the middle element to the rightmost element to
 // decide which half contains the rotation point (and the minimum).
+//
 // Time: O(log n), Space: O(1)
 class FindMinInRotated {
     public static int findMin(int[] nums) {

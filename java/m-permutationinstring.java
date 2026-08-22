@@ -2,8 +2,10 @@ import java.util.Arrays;
 
 // Permutation in String
 // Determine if one string contains a permutation of another as a substring.
+//
 // Sliding window of s1's length over s2, comparing 26-letter frequency
 // counts of the window against s1's counts at every position.
+//
 // Time: O(n), Space: O(1) (fixed 26-letter alphabet)
 class PermutationInString {
     public static boolean checkInclusion(String s1, String s2) {

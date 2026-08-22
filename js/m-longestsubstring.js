@@ -1,7 +1,9 @@
 // Longest Substring Without Repeating Characters
 // Find the length of the longest substring with no repeated characters.
+//
 // Sliding window with a map of last-seen index per character; shrink the
 // window's start whenever a repeat is found inside it.
+//
 // Time: O(n), Space: O(min(n, charset))
 function lengthOfLongestSubstring(s) {
   const seen = new Map();

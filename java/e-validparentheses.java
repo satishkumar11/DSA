@@ -3,8 +3,10 @@ import java.util.Deque;
 
 // Valid Parentheses
 // Determine if a string of brackets is validly matched and nested.
+//
 // Push opening brackets onto a stack; on a closing bracket, pop and check
 // it matches the expected opener, failing fast on any mismatch.
+//
 // Time: O(n), Space: O(n)
 class ValidParentheses {
     public static boolean isValid(String s) {

@@ -2,8 +2,10 @@ import java.util.Arrays;
 
 // Merge Sorted Array
 // Merge a second sorted array into the first, which has extra trailing space.
+//
 // Merge from the back: compare the largest remaining elements of both
 // arrays and place the bigger one at the end of nums1's true length.
+//
 // Time: O(m + n), Space: O(1)
 class MergeSortedArray {
     public static void merge(int[] nums1, int m, int[] nums2, int n) {

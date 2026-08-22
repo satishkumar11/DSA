@@ -1,7 +1,9 @@
 // Longest Repeating Character Replacement
 // Find the longest substring achievable by replacing at most k characters with the same character.
+//
 // Sliding window tracking the count of the most frequent character
 // inside it; shrink the window whenever replacements needed exceed k.
+//
 // Time: O(n), Space: O(1) (fixed 26-letter alphabet)
 function characterReplacement(s, k) {
   const counts = new Array(26).fill(0);

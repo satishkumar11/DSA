@@ -1,7 +1,9 @@
 // Binary Tree Level Order Traversal
 // Return the node values of a binary tree grouped level by level (BFS).
+//
 // Breadth-first search level by level: process the current queue of
 // nodes, collecting their values and queuing their children for the next round.
+//
 // Time: O(n), Space: O(n)
 class TreeNode {
   constructor(val, left = null, right = null) {

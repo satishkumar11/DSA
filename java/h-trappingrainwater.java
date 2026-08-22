@@ -1,7 +1,9 @@
 // Trapping Rain Water
 // Compute how much rainwater is trapped between bars of varying height.
+//
 // Two pointers tracking the max height seen from each side; water at any
 // position is bounded by the smaller of the two running maxes.
+//
 // Time: O(n), Space: O(1)
 class TrappingRainWater {
     public static int trap(int[] height) {

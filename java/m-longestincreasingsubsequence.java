@@ -1,7 +1,9 @@
 // Longest Increasing Subsequence
 // Find the length of the longest strictly increasing subsequence in an array.
+//
 // Patience sorting: maintain the smallest possible tail value for every
 // subsequence length, using binary search to place each new number.
+//
 // Time: O(n log n), Space: O(n)
 class LongestIncreasingSubsequence {
     public static int lengthOfLIS(int[] nums) {

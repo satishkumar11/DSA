@@ -1,7 +1,9 @@
 // Kth Largest Element in an Array
 // Find the kth largest element in an unsorted array.
+//
 // Maintain a min-heap of size k while scanning the array; the smallest
 // element in that heap is always the kth largest overall.
+//
 // Time: O(n) average, Space: O(1)
 function findKthLargest(nums, k) {
   const target = nums.length - k;

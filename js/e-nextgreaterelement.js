@@ -1,7 +1,9 @@
 // Next Greater Element I
 // For each element in one array, find its next greater element in another array.
+//
 // Monotonic decreasing stack over nums2 to precompute each value's next
 // greater element in a map, then look up answers for nums1 from that map.
+//
 // Time: O(n + m), Space: O(n)
 function nextGreaterElement(nums1, nums2) {
   const map = new Map();

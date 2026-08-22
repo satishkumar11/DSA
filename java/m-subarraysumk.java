@@ -3,8 +3,10 @@ import java.util.Map;
 
 // Subarray Sum Equals K
 // Count the number of contiguous subarrays whose sum equals k.
+//
 // Track running prefix sums in a hash map; a subarray sums to k whenever
 // (prefixSum - k) was seen before at some earlier index.
+//
 // Time: O(n), Space: O(n)
 class SubarraySumK {
     public static int subarraySum(int[] nums, int k) {

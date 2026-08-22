@@ -3,8 +3,10 @@ import java.util.Map;
 
 // Fruit Into Baskets
 // Find the longest subarray containing at most two distinct values.
+//
 // Sliding window with a count map of fruit types inside it; shrink from
 // the left whenever more than two distinct types are present.
+//
 // Time: O(n), Space: O(1)
 class FruitIntoBaskets {
     public static int totalFruit(int[] fruits) {

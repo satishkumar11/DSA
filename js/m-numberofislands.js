@@ -1,7 +1,9 @@
 // Number of Islands
 // Count the number of connected land regions in a 2D grid.
+//
 // For every unvisited land cell, DFS flood-fills the entire connected
 // region to zero it out, counting one island per flood-fill.
+//
 // Time: O(rows * cols), Space: O(rows * cols) recursion stack
 function numIslands(grid) {
   if (!grid.length) return 0;

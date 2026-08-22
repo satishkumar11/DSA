@@ -3,8 +3,10 @@ import java.util.Set;
 
 // Contains Duplicate
 // Determine whether any value appears more than once in an array.
+//
 // Add each number to a hash set while scanning; if a number is already
 // in the set, a duplicate has been found.
+//
 // Time: O(n), Space: O(n)
 class ContainsDuplicate {
     public static boolean containsDuplicate(int[] nums) {

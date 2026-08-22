@@ -1,7 +1,9 @@
 // Remove Duplicates from Sorted Array
 // Remove duplicates in place from a sorted array and return the new length.
+//
 // Two pointers: a slow pointer marks the last unique value written, a fast
 // pointer scans ahead and copies in any new distinct value.
+//
 // Time: O(n), Space: O(1)
 function removeDuplicates(nums) {
   if (nums.length === 0) return 0;

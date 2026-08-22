@@ -1,7 +1,9 @@
 // Binary Search
 // Find the index of a target value in a sorted array.
+//
 // Repeatedly halve the search range, comparing the middle element to the
 // target and discarding the half that can't contain it.
+//
 // Time: O(log n), Space: O(1)
 function binarySearch(nums, target) {
   let lo = 0;

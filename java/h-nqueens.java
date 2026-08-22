@@ -3,8 +3,10 @@ import java.util.List;
 
 // N-Queens
 // Place n queens on an n x n chessboard so that no two attack each other.
+//
 // Backtracking placing one queen per row; track occupied columns and
 // diagonals with sets so each placement can be checked in O(1).
+//
 // Time: O(n!), Space: O(n^2)
 class NQueens {
     public static List<List<String>> solveNQueens(int n) {

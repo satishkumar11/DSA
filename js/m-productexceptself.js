@@ -1,7 +1,9 @@
 // Product of Array Except Self
 // Return an array where each element is the product of all other elements, without using division.
+//
 // Make one left-to-right pass to fill in prefix products, then one
 // right-to-left pass to multiply in suffix products.
+//
 // Time: O(n), Space: O(1) excluding output array
 function productExceptSelf(nums) {
   const n = nums.length;

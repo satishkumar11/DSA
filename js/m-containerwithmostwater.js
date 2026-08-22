@@ -1,7 +1,9 @@
 // Container With Most Water
 // Find two lines that, with the x-axis, form a container holding the most water.
+//
 // Two pointers starting at both ends; always move the pointer at the
 // shorter line inward, since it's the only side that could improve the area.
+//
 // Time: O(n), Space: O(1)
 function maxArea(height) {
   let l = 0;

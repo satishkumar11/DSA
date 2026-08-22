@@ -1,7 +1,9 @@
 // Valid Palindrome
 // Determine if a string is a palindrome, ignoring non-alphanumeric characters and case.
+//
 // Two pointers from both ends, skipping non-alphanumeric characters and
 // comparing letters case-insensitively until they meet in the middle.
+//
 // Time: O(n), Space: O(1)
 function isPalindrome(s) {
   let l = 0;
