@@ -20,7 +20,7 @@ Problems flagged for another pass before the interview.
 ## Easy (30)
 
 | # | Problem | JavaScript | Java |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | Two Sum | [e-2sum.js](js/e-2sum.js) | [e-2sum.java](java/e-2sum.java) |
 | 2 | Valid Anagram | [e-validanagram.js](js/e-validanagram.js) | [e-validanagram.java](java/e-validanagram.java) |
 | 3 | Remove Duplicates from Sorted Array 🔁 | [e-removeduplicates.js](js/e-removeduplicates.js) | [e-removeduplicates.java](java/e-removeduplicates.java) |
@@ -55,7 +55,7 @@ Problems flagged for another pass before the interview.
 ## Medium (37)
 
 | # | Problem | JavaScript | Java |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | Group Anagrams | [m-groupanagrams.js](js/m-groupanagrams.js) | [m-groupanagrams.java](java/m-groupanagrams.java) |
 | 2 | Top K Frequent Elements | [m-topkfrequent.js](js/m-topkfrequent.js) | [m-topkfrequent.java](java/m-topkfrequent.java) |
 | 3 | Product of Array Except Self | [m-productexceptself.js](js/m-productexceptself.js) | [m-productexceptself.java](java/m-productexceptself.java) |
@@ -97,7 +97,7 @@ Problems flagged for another pass before the interview.
 ## Hard (9)
 
 | # | Problem | JavaScript | Java |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | Trapping Rain Water | [h-trappingrainwater.js](js/h-trappingrainwater.js) | [h-trappingrainwater.java](java/h-trappingrainwater.java) |
 | 2 | Sliding Window Maximum | [h-slidingwindowmax.js](js/h-slidingwindowmax.js) | [h-slidingwindowmax.java](java/h-slidingwindowmax.java) |
 | 3 | Minimum Window Substring | [h-minwindowsubstring.js](js/h-minwindowsubstring.js) | [h-minwindowsubstring.java](java/h-minwindowsubstring.java) |

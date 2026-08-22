@@ -1,3 +1,4 @@
+// hellointerview: https://www.hellointerview.com/learn/code/binary-search/apple-harvest
 // Koko Eating Bananas
 // Find the minimum eating speed to finish all banana piles within h hours.
 //

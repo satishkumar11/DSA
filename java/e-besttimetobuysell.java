@@ -1,3 +1,4 @@
+// hellointerview: https://www.hellointerview.com/learn/code/greedy/best-time-to-buy-and-sell-stock
 // Best Time to Buy and Sell Stock
 // Find the maximum profit from a single buy and sell of one share.
 //

@@ -1,3 +1,4 @@
+// hellointerview: https://www.hellointerview.com/learn/code/sliding-window/longest-repeating-character-replacement
 // Longest Repeating Character Replacement
 // Find the longest substring achievable by replacing at most k characters with the same character.
 //
