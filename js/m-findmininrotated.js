@@ -1,0 +1,19 @@
+// Find Minimum in Rotated Sorted Array
+// Find the minimum element in a sorted array that has been rotated.
+// Time: O(log n), Space: O(1)
+function findMin(nums) {
+  let lo = 0;
+  let hi = nums.length - 1;
+
+  while (lo < hi) {
+    const mid = Math.floor((lo + hi) / 2);
+    if (nums[mid] > nums[hi]) lo = mid + 1;
+    else hi = mid;
+  }
+
+  return nums[lo];
+}
+
+console.log(findMin([3, 4, 5, 1, 2])); // 1
+
+module.exports = findMin;
