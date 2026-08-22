@@ -3,6 +3,9 @@ import java.util.*;
 // 3Sum
 // Find all unique triplets in an array that sum to zero.
 //
+// Input: nums = [-1, 0, 1, 2, -1, -4]
+// Output: [[-1, -1, 2], [-1, 0, 1]]
+//
 // Sort the array, fix one number, then use two pointers moving inward
 // from both ends to find pairs that complete the triplet to zero.
 //

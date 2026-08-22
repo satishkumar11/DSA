@@ -1,6 +1,9 @@
 // Longest Palindromic Substring
 // Find the longest substring that reads the same forwards and backwards.
 //
+// Input: s = "babad"
+// Output: "bab" (or "aba")
+//
 // Expand around every possible center (both single and double character)
 // and track the widest palindrome found.
 //

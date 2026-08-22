@@ -3,6 +3,9 @@ import java.util.Arrays;
 // Koko Eating Bananas
 // Find the minimum eating speed to finish all banana piles within h hours.
 //
+// Input: piles = [3, 6, 7, 11], h = 8
+// Output: 4
+//
 // Binary search on the eating speed itself; for each candidate speed,
 // check whether all piles can be finished within h hours.
 //

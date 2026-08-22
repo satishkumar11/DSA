@@ -4,6 +4,9 @@ import java.util.Set;
 // Longest Consecutive Sequence
 // Find the length of the longest run of consecutive integers in an unsorted array.
 //
+// Input: nums = [100, 4, 200, 1, 3, 2]
+// Output: 4
+//
 // Put all numbers in a set, then only start counting a streak from
 // numbers whose predecessor (n-1) is not in the set.
 //

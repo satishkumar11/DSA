@@ -1,6 +1,9 @@
 // Daily Temperatures
 // For each day, find how many days until a warmer temperature.
 //
+// Input: temperatures = [73,74,75,71,69,72,76,73]
+// Output: [1, 1, 4, 2, 1, 1, 0, 0]
+//
 // Monotonic decreasing stack of indices; whenever a warmer temperature
 // arrives, pop and resolve every colder day still waiting on the stack.
 //

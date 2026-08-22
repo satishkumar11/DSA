@@ -3,6 +3,9 @@ import java.util.Arrays;
 // Remove Duplicates from Sorted Array
 // Remove duplicates in place from a sorted array and return the new length.
 //
+// Input: nums = [1, 1, 2, 2, 3]
+// Output: 3 (array becomes [1, 2, 3, ...])
+//
 // Two pointers: a slow pointer marks the last unique value written, a fast
 // pointer scans ahead and copies in any new distinct value.
 //

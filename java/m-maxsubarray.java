@@ -1,6 +1,9 @@
 // Maximum Subarray
 // Find the contiguous subarray with the largest sum (Kadane's algorithm).
 //
+// Input: nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+// Output: 6
+//
 // Kadane's algorithm: at each index, either extend the previous subarray
 // or start fresh, keeping whichever running sum is larger.
 //

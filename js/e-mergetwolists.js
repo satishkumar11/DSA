@@ -1,8 +1,15 @@
 // Merge Two Sorted Lists
 // Merge two sorted linked lists into one sorted list.
 //
+// Input: l1 = [1, 2, 4], l2 = [1, 3, 4]
+// Output: [1, 1, 2, 3, 4, 4]
+//
 // Walk both lists together, always attaching the smaller head node to the
 // result, then append whichever list still has nodes left.
+//
+// l1:      1 -> 2 -> 4
+// l2:      1 -> 3 -> 4
+// Merged:  1 -> 1 -> 2 -> 3 -> 4 -> 4
 //
 // Time: O(n + m), Space: O(1)
 class ListNode {

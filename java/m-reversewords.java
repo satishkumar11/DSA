@@ -1,6 +1,9 @@
 // Reverse Words in a String
 // Reverse the order of words in a sentence, collapsing extra whitespace.
 //
+// Input: s = "  the sky is blue  "
+// Output: "blue is sky the"
+//
 // Trim and split the string on whitespace, reverse the resulting word
 // list, and join with single spaces.
 //

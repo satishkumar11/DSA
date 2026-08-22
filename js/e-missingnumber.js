@@ -1,6 +1,9 @@
 // Missing Number
 // Find the missing number in an array containing n distinct numbers from 0 to n.
 //
+// Input: nums = [3, 0, 1]
+// Output: 2
+//
 // XOR every index and every value together; all present pairs cancel out,
 // leaving only the missing number.
 //

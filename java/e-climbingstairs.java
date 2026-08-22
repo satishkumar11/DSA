@@ -1,6 +1,9 @@
 // Climbing Stairs
 // Count the number of distinct ways to climb n stairs taking 1 or 2 steps at a time.
 //
+// Input: n = 5
+// Output: 8
+//
 // Bottom-up DP array: ways(i) = ways(i-1) + ways(i-2), same recurrence as
 // Fibonacci, built iteratively so no recomputation is needed.
 //
@@ -21,6 +24,7 @@ class ClimbingStairs {
         return DP[n];
     }
 
+    // Time: O(2^n), Space: O(n) call stack
     // public int getWays(int n){
     //     if(n<=1){
     //         return n;

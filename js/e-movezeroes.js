@@ -1,6 +1,9 @@
 // Move Zeroes
 // Move all zeroes to the end of an array while keeping the relative order of non-zero elements.
 //
+// Input: nums = [0, 1, 0, 3, 12]
+// Output: [1, 3, 12, 0, 0]
+//
 // Two pointers: an insert pointer tracks where the next non-zero value
 // goes; after copying all non-zeros forward, fill the remaining tail with zeros.
 //

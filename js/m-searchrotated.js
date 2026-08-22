@@ -1,6 +1,9 @@
 // Search in Rotated Sorted Array
 // Find a target's index in a sorted array that has been rotated at an unknown pivot.
 //
+// Input: nums = [4, 5, 6, 7, 0, 1, 2], target = 0
+// Output: 4
+//
 // Modified binary search: at each step, determine which half of the
 // array is sorted, then check if the target falls in that sorted half.
 //

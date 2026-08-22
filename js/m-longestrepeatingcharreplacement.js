@@ -1,6 +1,9 @@
 // Longest Repeating Character Replacement
 // Find the longest substring achievable by replacing at most k characters with the same character.
 //
+// Input: s = "ABAB", k = 2
+// Output: 4
+//
 // Sliding window tracking the count of the most frequent character
 // inside it; shrink the window whenever replacements needed exceed k.
 //

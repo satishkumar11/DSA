@@ -4,6 +4,9 @@ import java.util.Map;
 // Roman to Integer
 // Convert a Roman numeral string to its integer value.
 //
+// Input: s = "MCMXCIV"
+// Output: 1994
+//
 // Sum symbol values left to right, but subtract a symbol whose value is
 // less than the symbol immediately after it (subtractive notation).
 //

@@ -5,6 +5,9 @@ import java.util.Arrays;
 // Two Sum
 // Given an array of integers and a target, return the indices of the two numbers that add up to the target.
 //
+// Input: nums = [2, 7, 11, 15], target = 9
+// Output: [0, 1]
+//
 // Use a hash map to store each number's index as you scan the array.
 // For every element, check whether its complement (target - num) has already been seen.
 //

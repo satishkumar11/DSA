@@ -1,6 +1,9 @@
 // Valid Palindrome
 // Determine if a string is a palindrome, ignoring non-alphanumeric characters and case.
 //
+// Input: s = "A man, a plan, a canal: Panama"
+// Output: true
+//
 // Two pointers from both ends, skipping non-alphanumeric characters and
 // comparing letters case-insensitively until they meet in the middle.
 //

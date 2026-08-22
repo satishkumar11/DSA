@@ -1,6 +1,9 @@
 // String Compression
 // Compress consecutive repeated characters in place using counts.
 //
+// Input: chars = ["a","a","b","b","c","c","c"]
+// Output: 6, ["a","2","b","2","c","3"]
+//
 // Two pointers: a read pointer counts runs of identical characters while
 // a write pointer overwrites the array in place with the char and its count.
 //

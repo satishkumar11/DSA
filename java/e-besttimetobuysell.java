@@ -1,6 +1,9 @@
 // Best Time to Buy and Sell Stock
 // Find the maximum profit from a single buy and sell of one share.
 //
+// Input: prices = [7, 1, 5, 3, 6, 4]
+// Output: 5
+//
 // Track the minimum price seen so far while scanning; at each day, check
 // the profit from selling at today's price against that minimum.
 //

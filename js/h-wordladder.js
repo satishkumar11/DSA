@@ -1,8 +1,13 @@
 // Word Ladder
 // Find the shortest transformation sequence length from one word to another, changing one letter at a time.
 //
+// Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
+// Output: 5
+//
 // BFS over words, generating every one-letter variation of the current
 // word at each step; BFS guarantees the shortest transformation path.
+//
+// hit -> hot -> dot -> dog -> cog   (5 words = shortest ladder)
 //
 // Time: O(n * 26 * L), Space: O(n)
 function ladderLength(beginWord, endWord, wordList) {

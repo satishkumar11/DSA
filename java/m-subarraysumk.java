@@ -4,6 +4,9 @@ import java.util.Map;
 // Subarray Sum Equals K
 // Count the number of contiguous subarrays whose sum equals k.
 //
+// Input: nums = [1, 1, 1], k = 2
+// Output: 2
+//
 // Track running prefix sums in a hash map; a subarray sums to k whenever
 // (prefixSum - k) was seen before at some earlier index.
 //

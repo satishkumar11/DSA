@@ -4,8 +4,19 @@ import java.util.Deque;
 // Serialize and Deserialize Binary Tree
 // Convert a binary tree to a string and back to an identical tree.
 //
+// Input: root = [1, 2, 3, null, null, 4, 5]
+// Output: "1,2,#,#,3,4,#,#,5,#,#"
+//
 // Serialize via preorder traversal with explicit null markers, then
 // rebuild the tree by consuming that same token sequence in order.
+//
+//       1
+//      / \
+//     2   3
+//        / \
+//       4   5
+//
+// Serialized (preorder, # = null): 1,2,#,#,3,4,#,#,5,#,#
 //
 // Time: O(n), Space: O(n)
 class SerializeDeserialize {

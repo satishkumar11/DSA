@@ -1,6 +1,9 @@
 // Remove K Digits
 // Remove k digits from a number string to make it as small as possible.
 //
+// Input: num = "1432219", k = 3
+// Output: "1219"
+//
 // Monotonic increasing stack: pop larger digits off the top whenever a
 // smaller digit arrives and removals remain, then trim leading zeros.
 //

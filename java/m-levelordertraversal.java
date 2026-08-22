@@ -4,8 +4,19 @@ import java.util.List;
 // Binary Tree Level Order Traversal
 // Return the node values of a binary tree grouped level by level (BFS).
 //
+// Input: root = [3, 9, 20, null, null, 15, 7]
+// Output: [[3], [9, 20], [15, 7]]
+//
 // Breadth-first search level by level: process the current queue of
 // nodes, collecting their values and queuing their children for the next round.
+//
+//       3
+//      / \
+//     9   20
+//        /  \
+//       15   7
+//
+// Level order: [[3], [9, 20], [15, 7]]
 //
 // Time: O(n), Space: O(n)
 class LevelOrderTraversal {

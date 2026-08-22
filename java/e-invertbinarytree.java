@@ -1,8 +1,18 @@
 // Invert Binary Tree
 // Swap every left and right child to mirror a binary tree.
 //
+// Input: root = [4, 2, 7, 1, 3, 6, 9]
+// Output: [4, 7, 2, 9, 6, 3, 1]
+//
 // Recursively invert both subtrees, then swap the left and right
 // child pointers at the current node.
+//
+// Before:            After:
+//       4                   4
+//      / \                 / \
+//     2   7               7   2
+//    / \ / \             / \ / \
+//   1  3 6  9           9  6 3  1
 //
 // Time: O(n), Space: O(h)
 class InvertBinaryTree {

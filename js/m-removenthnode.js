@@ -1,8 +1,14 @@
 // Remove Nth Node From End of List
 // Remove the nth node from the end of a linked list in one pass.
 //
+// Input: 1 -> 2 -> 3 -> 4 -> 5, n = 2
+// Output: 1 -> 2 -> 3 -> 5
+//
 // Two pointers separated by a gap of n nodes; when the fast pointer
 // reaches the end, the slow pointer sits right before the node to remove.
+//
+// Before: 1 -> 2 -> 3 -> 4 -> 5   (n = 2, so remove the 4)
+// After:  1 -> 2 -> 3 -> 5
 //
 // Time: O(n), Space: O(1)
 class ListNode {

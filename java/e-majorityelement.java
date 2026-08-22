@@ -1,6 +1,9 @@
 // Majority Element
 // Find the element that appears more than n/2 times in an array.
 //
+// Input: nums = [2, 2, 1, 1, 1, 2, 2]
+// Output: 2
+//
 // Boyer-Moore voting: keep a running candidate and a count, incrementing
 // on a match and decrementing otherwise; the true majority always survives.
 //

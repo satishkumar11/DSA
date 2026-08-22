@@ -1,8 +1,18 @@
 // Validate Binary Search Tree
 // Determine whether a binary tree satisfies the binary search tree property.
 //
+// Input: root = [2, 1, 3]
+// Output: true
+//
 // Recursively validate each node against a shrinking (min, max) range
 // inherited from its ancestors, rather than just comparing to its parent.
+//
+// Valid:            Invalid (3 sits in root's right subtree, but 3 < 5):
+//     2                    5
+//    / \                  / \
+//   1   3                1   4
+//                            / \
+//                           3   6
 //
 // Time: O(n), Space: O(h)
 class ValidateBST {

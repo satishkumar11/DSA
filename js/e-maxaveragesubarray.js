@@ -1,6 +1,9 @@
 // Maximum Average Subarray I
 // Find the contiguous subarray of length k with the maximum average value.
 //
+// Input: nums = [1, 12, -5, -6, 50, 3], k = 4
+// Output: 12.75
+//
 // Fixed-size sliding window: compute the first window's sum, then slide
 // by adding the entering element and subtracting the one leaving.
 //

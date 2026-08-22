@@ -1,6 +1,9 @@
 // Longest Increasing Subsequence
 // Find the length of the longest strictly increasing subsequence in an array.
 //
+// Input: nums = [10, 9, 2, 5, 3, 7, 101, 18]
+// Output: 4
+//
 // Patience sorting: maintain the smallest possible tail value for every
 // subsequence length, using binary search to place each new number.
 //

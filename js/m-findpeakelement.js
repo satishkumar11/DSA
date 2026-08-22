@@ -1,6 +1,9 @@
 // Find Peak Element
 // Find an index whose value is greater than both its neighbors.
 //
+// Input: nums = [1, 2, 3, 1]
+// Output: 2
+//
 // Binary search that always moves toward the side with a larger
 // neighbor, since that side is guaranteed to contain a peak.
 //

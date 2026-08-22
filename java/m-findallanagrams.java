@@ -5,6 +5,9 @@ import java.util.List;
 // Find All Anagrams in a String
 // Find all starting indices of p's anagrams in s.
 //
+// Input: s = "cbaebabacd", p = "abc"
+// Output: [0, 6]
+//
 // Sliding window of p's length over s, comparing 26-letter frequency
 // counts and recording every position where they match exactly.
 //

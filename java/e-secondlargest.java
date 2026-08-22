@@ -1,6 +1,9 @@
 // Second Largest Element in an Array
 // Find the second largest distinct value in an array.
 //
+// Input: nums = [12, 35, 1, 10, 34, 1]
+// Output: 34
+//
 // Track the largest and second-largest values seen so far in one pass,
 // updating both whenever a new maximum is found.
 //

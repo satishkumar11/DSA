@@ -1,6 +1,9 @@
 // Minimum Window Substring
 // Find the smallest substring of s that contains every character of t.
 //
+// Input: s = "ADOBECODEBANC", t = "ABC"
+// Output: "BANC"
+//
 // Sliding window with a need/have character count; expand the right edge
 // until valid, then shrink the left edge to find the smallest valid window.
 //

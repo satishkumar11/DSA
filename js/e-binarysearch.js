@@ -1,6 +1,9 @@
 // Binary Search
 // Find the index of a target value in a sorted array.
 //
+// Input: nums = [-1, 0, 3, 5, 9, 12], target = 9
+// Output: 4
+//
 // Repeatedly halve the search range, comparing the middle element to the
 // target and discarding the half that can't contain it.
 //

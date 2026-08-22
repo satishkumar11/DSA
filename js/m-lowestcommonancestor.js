@@ -1,8 +1,15 @@
 // Lowest Common Ancestor of a Binary Tree
 // Find the lowest node that has both given nodes as descendants.
 //
+// Input: root = [3, 5, 1], p = 5, q = 1
+// Output: 3
+//
 // Recurse into both subtrees; if one node is found in one subtree and the
 // other is found in the other subtree, the current node is the LCA.
+//
+//     3    <- LCA(5, 1)
+//    / \
+//   5   1
 //
 // Time: O(n), Space: O(h)
 class TreeNode {

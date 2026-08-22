@@ -3,6 +3,9 @@ import java.util.PriorityQueue;
 // Kth Largest Element in an Array
 // Find the kth largest element in an unsorted array.
 //
+// Input: nums = [3, 2, 1, 5, 6, 4], k = 2
+// Output: 5
+//
 // Maintain a min-heap of size k while scanning the array; the smallest
 // element in that heap is always the kth largest overall.
 //

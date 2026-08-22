@@ -4,6 +4,9 @@ import java.util.Deque;
 // Min Stack
 // Design a stack that supports push, pop, top, and retrieving the minimum in O(1).
 //
+// Input: push(-2); push(0); push(-3); getMin(); pop(); top(); getMin()
+// Output: -3, 0, -2
+//
 // Maintain a parallel stack that tracks the running minimum at each
 // push, so getMin is always just a peek at its top.
 //

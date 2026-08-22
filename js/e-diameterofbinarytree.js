@@ -1,8 +1,19 @@
 // Diameter of Binary Tree
 // Find the length of the longest path between any two nodes in a binary tree.
 //
+// Input: root = [1, 2, 3, 4, 5]
+// Output: 3
+//
 // Recursively compute each subtree's height while updating a running
 // max diameter using the sum of left and right subtree heights at every node.
+//
+//         1
+//        / \
+//       2   3
+//      / \
+//     4   5
+//
+// Longest path: 4 - 2 - 1 - 3 (diameter = 3 edges)
 //
 // Time: O(n), Space: O(h)
 class TreeNode {

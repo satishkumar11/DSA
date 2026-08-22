@@ -1,8 +1,13 @@
 // Clone Graph
 // Create a deep copy of a connected undirected graph.
 //
+// Input: node1 -- node2
+// Output: cloned graph (1' -- 2')
+//
 // DFS from the given node, using a map from original to clone to avoid
 // recreating (or infinitely revisiting) nodes already copied.
+//
+// Original:  1 -- 2      Clone:  1' -- 2'
 //
 // Time: O(V + E), Space: O(V)
 class Node {

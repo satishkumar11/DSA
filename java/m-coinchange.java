@@ -3,6 +3,9 @@ import java.util.Arrays;
 // Coin Change
 // Find the fewest number of coins needed to make up a given amount.
 //
+// Input: coins = [1, 2, 5], amount = 11
+// Output: 3
+//
 // Bottom-up DP: for each amount from 1 to target, try every coin and take
 // the minimum coins needed using dp[amount - coin] + 1.
 //

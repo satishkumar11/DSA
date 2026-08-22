@@ -4,6 +4,9 @@ import java.util.Deque;
 // Implement Queue using Stacks
 // Implement a FIFO queue using only two stacks.
 //
+// Input: push(1); push(2); peek(); pop(); empty()
+// Output: 1, 1, false
+//
 // Two stacks: push always goes to the input stack; pop/peek drain the
 // input stack into the output stack only when the output stack is empty.
 //

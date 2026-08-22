@@ -4,6 +4,9 @@ import java.util.Map;
 // LRU Cache
 // Design a fixed-capacity cache that evicts the least recently used item.
 //
+// Input: capacity = 2; put(1,1); put(2,2); get(1); put(3,3); get(2)
+// Output: 1, -1
+//
 // Backed by an insertion-ordered map; every get/put re-inserts the key so
 // it becomes most recent, and overflow evicts the oldest entry.
 //

@@ -1,8 +1,14 @@
 // Reverse Linked List
 // Reverse a singly linked list and return the new head.
 //
+// Input: 1 -> 2 -> 3 -> 4 -> 5
+// Output: 5 -> 4 -> 3 -> 2 -> 1
+//
 // Iterate through the list, reversing each node's next pointer to point
 // backward while carrying a running previous-node reference.
+//
+// Before: 1 -> 2 -> 3 -> 4 -> 5 -> null
+// After:  5 -> 4 -> 3 -> 2 -> 1 -> null
 //
 // Time: O(n), Space: O(1)
 class ReverseLinkedList {

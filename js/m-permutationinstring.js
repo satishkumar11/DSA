@@ -1,6 +1,9 @@
 // Permutation in String
 // Determine if one string contains a permutation of another as a substring.
 //
+// Input: s1 = "ab", s2 = "eidbaooo"
+// Output: true
+//
 // Sliding window of s1's length over s2, comparing 26-letter frequency
 // counts of the window against s1's counts at every position.
 //

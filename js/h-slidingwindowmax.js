@@ -1,8 +1,20 @@
 // Sliding Window Maximum
 // Return the maximum value in every sliding window of size k.
 //
+// Input: nums = [1, 3, -1, -3, 5, 3, 6, 7], k = 3
+// Output: [3, 3, 5, 5, 6, 7]
+//
 // Maintain a monotonic decreasing deque of indices; the front always
 // holds the max of the current window, evicting stale or smaller values.
+//
+// nums = [1, 3, -1, -3, 5, 3, 6, 7], k = 3
+//
+// [1  3 -1] -3  5  3  6  7   -> max 3
+//  1 [3 -1 -3]  5  3  6  7   -> max 3
+//  1  3 [-1 -3  5] 3  6  7   -> max 5
+//  1  3 -1 [-3  5  3] 6  7   -> max 5
+//  1  3 -1 -3 [5  3  6] 7    -> max 6
+//  1  3 -1 -3  5 [3  6  7]   -> max 7
 //
 // Time: O(n), Space: O(k)
 function maxSlidingWindow(nums, k) {

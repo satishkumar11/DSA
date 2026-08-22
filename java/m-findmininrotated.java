@@ -1,6 +1,9 @@
 // Find Minimum in Rotated Sorted Array
 // Find the minimum element in a sorted array that has been rotated.
 //
+// Input: nums = [3, 4, 5, 1, 2]
+// Output: 1
+//
 // Binary search comparing the middle element to the rightmost element to
 // decide which half contains the rotation point (and the minimum).
 //

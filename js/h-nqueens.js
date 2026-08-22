@@ -1,8 +1,17 @@
 // N-Queens
 // Place n queens on an n x n chessboard so that no two attack each other.
 //
+// Input: n = 4
+// Output: 2 distinct solutions
+//
 // Backtracking placing one queen per row; track occupied columns and
 // diagonals with sets so each placement can be checked in O(1).
+//
+// One valid solution for n = 4:
+// . Q . .
+// . . . Q
+// Q . . .
+// . . Q .
 //
 // Time: O(n!), Space: O(n^2)
 function solveNQueens(n) {

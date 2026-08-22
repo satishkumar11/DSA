@@ -3,6 +3,9 @@ import java.util.*;
 // Top K Frequent Elements
 // Return the k most frequently occurring elements in an array.
 //
+// Input: nums = [1, 1, 1, 2, 2, 3], k = 2
+// Output: [1, 2]
+//
 // Count each value's frequency, then keep a min-heap of size k so only
 // the k most frequent values survive by the end.
 //

@@ -1,8 +1,19 @@
 // Maximum Depth of Binary Tree
 // Find the number of nodes along the longest path from root to a leaf.
 //
+// Input: root = [3, 9, 20, null, null, 15, 7]
+// Output: 3
+//
 // Recursively return 1 plus the larger of the left and right subtree
 // depths, bottoming out at 0 for a null node.
+//
+//       3
+//      / \
+//     9   20
+//        /  \
+//       15   7
+//
+// Depth = 3 (path 3 -> 20 -> 15)
 //
 // Time: O(n), Space: O(h)
 class TreeNode {

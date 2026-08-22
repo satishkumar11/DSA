@@ -1,6 +1,9 @@
 // Group Anagrams
 // Group an array of strings into sets where every string in a set is an anagram of the others.
 //
+// Input: strs = ["eat","tea","tan","ate","nat","bat"]
+// Output: [["eat","tea","ate"],["tan","nat"],["bat"]]
+//
 // Sort each string's characters to build a canonical key, then group
 // original strings by that key in a hash map.
 //

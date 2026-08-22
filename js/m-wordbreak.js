@@ -1,6 +1,9 @@
 // Word Break
 // Determine if a string can be segmented into a space-separated sequence of dictionary words.
 //
+// Input: s = "leetcode", wordDict = ["leet","code"]
+// Output: true
+//
 // DP where dp[i] means the prefix of length i is breakable; dp[i] is true
 // if some earlier breakable point j has s[j:i] as a dictionary word.
 //

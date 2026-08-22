@@ -3,6 +3,9 @@ import java.util.Arrays;
 // Merge Sorted Array
 // Merge a second sorted array into the first, which has extra trailing space.
 //
+// Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+// Output: [1, 2, 2, 3, 5, 6]
+//
 // Merge from the back: compare the largest remaining elements of both
 // arrays and place the bigger one at the end of nums1's true length.
 //

@@ -3,8 +3,14 @@ import java.util.*;
 // Course Schedule
 // Determine if all courses can be finished given their prerequisite pairs.
 //
+// Input: numCourses = 2, prerequisites = [[1,0]]
+// Output: true (with [[1,0],[0,1]] -> false)
+//
 // Kahn's algorithm: repeatedly remove courses with no remaining
 // prerequisites; if every course gets removed, there's no cycle blocking completion.
+//
+// [[1,0]]:        0 -> 1              (no cycle, can finish)
+// [[1,0],[0,1]]:  0 -> 1 -> 0 (cycle)  (cannot finish)
 //
 // Time: O(V + E), Space: O(V + E)
 class CourseSchedule {

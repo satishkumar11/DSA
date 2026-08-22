@@ -1,6 +1,9 @@
 // Median of Two Sorted Arrays
 // Find the median of two sorted arrays in logarithmic time.
 //
+// Input: nums1 = [1, 3], nums2 = [2]
+// Output: 2.0 (with [1,2],[3,4] -> 2.5)
+//
 // Binary search a partition point in the smaller array so that the
 // combined left half and right half of both arrays are balanced and ordered.
 //

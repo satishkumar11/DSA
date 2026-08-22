@@ -1,6 +1,9 @@
 // Product of Array Except Self
 // Return an array where each element is the product of all other elements, without using division.
 //
+// Input: nums = [1, 2, 3, 4]
+// Output: [24, 12, 8, 6]
+//
 // Make one left-to-right pass to fill in prefix products, then one
 // right-to-left pass to multiply in suffix products.
 //

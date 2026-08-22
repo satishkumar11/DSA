@@ -1,6 +1,9 @@
 // Valid Anagram
 // Determine if string t is an anagram of string s (same characters, same frequency).
 //
+// Input: s = "anagram", t = "nagaram"
+// Output: true
+//
 // Count character frequencies of both strings into a single 26-slot array,
 // incrementing for s and decrementing for t; all zeros means an anagram.
 //

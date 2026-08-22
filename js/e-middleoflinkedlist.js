@@ -1,8 +1,13 @@
 // Middle of the Linked List
 // Return the middle node of a singly linked list.
 //
+// Input: 1 -> 2 -> 3 -> 4 -> 5
+// Output: 3
+//
 // Slow and fast pointers: fast moves two nodes for every one the slow
 // pointer moves, so slow lands on the middle when fast reaches the end.
+//
+// 1 -> 2 -> [3] -> 4 -> 5   (middle node returned)
 //
 // Time: O(n), Space: O(1)
 class ListNode {

@@ -1,6 +1,9 @@
 // First Bad Version
 // Find the first bad version using the fewest calls to an isBadVersion API.
 //
+// Input: n = 5, bad = 4
+// Output: 4
+//
 // Binary search over version numbers, narrowing toward the first version
 // where isBadVersion returns true.
 //
@@ -18,6 +21,8 @@ function firstBadVersion(n, isBadVersion) {
   return lo;
 }
 
-console.log(firstBadVersion(5, (v) => v >= 4)); // 4
+const bad = 4;
+const isBadVersion = (version) => version >= bad; // every version from `bad` onward is bad
+console.log(firstBadVersion(5, isBadVersion)); // 4
 
 module.exports = firstBadVersion;

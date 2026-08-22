@@ -1,6 +1,9 @@
 // Edit Distance
 // Find the minimum number of insert/delete/replace operations to convert one word into another.
 //
+// Input: word1 = "horse", word2 = "ros"
+// Output: 3
+//
 // 2D DP where dp[i][j] is the edit distance between the first i and j
 // characters; match chars for free, otherwise take the best of insert/delete/replace.
 //
