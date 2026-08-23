@@ -1,8 +1,11 @@
 // Find Peak Element
-// Find an index whose value is greater than both its neighbors.
+// Find an index whose value is strictly greater than both its neighbors.
+// Treat nums[-1] and nums[n] as -infinity, so an edge element only needs to
+// beat its one real neighbor. An array can have several valid peaks -
+// returning the index of any one of them is an acceptable answer.
 //
 // Input: nums = [1, 2, 3, 1]
-// Output: 2
+// Output: 2  (nums[2]=3 beats both neighbors 2 and 1 - the only peak here)
 //
 // Binary search that always moves toward the side with a larger
 // neighbor, since that side is guaranteed to contain a peak.
@@ -22,6 +25,8 @@ function findPeakElement(nums) {
 }
 
 console.log(findPeakElement([1, 2, 3, 1])); // 2
+// index 1 (value 2, beats 1 and 1) and index 5 (value 6, beats 5 and 4) are
+// both valid peaks in this array - either is a correct answer
 console.log(findPeakElement([1, 2, 1, 3, 5, 6, 4])); // 1 or 5
 
 module.exports = findPeakElement;

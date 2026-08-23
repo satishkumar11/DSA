@@ -3,10 +3,13 @@ import java.util.Arrays;
 import java.util.List;
 
 // Find All Anagrams in a String
-// Find all starting indices of p's anagrams in s.
+// Given strings s and p, find every starting index in s where a substring of
+// length p.length is an anagram of p (same letters, any order).
 //
-// Input: s = "cbaebabacd", p = "abc"
+// Input: s = "cbaebabacd", p = "abc"  (p.length = 3, so check every length-3 window of s)
 // Output: [0, 6]
+//   index 0 -> s[0..2] = "cba" -> an anagram of "abc"
+//   index 6 -> s[6..8] = "bac" -> an anagram of "abc"
 //
 // Sliding window of p's length over s, comparing 26-letter frequency
 // counts and recording every position where they match exactly.
@@ -17,17 +20,27 @@ class FindAllAnagrams {
         List<Integer> result = new ArrayList<>();
         if (s.length() < p.length()) return result;
 
-        int[] need = new int[26];
-        int[] window = new int[26];
+        int[] patternCounts = new int[26];
+        int[] windowCounts = new int[26];
 
-        for (char c : p.toCharArray()) need[c - 'a']++;
+        for (char c : p.toCharArray()) patternCounts[c - 'a']++;
 
-        for (int i = 0; i < s.length(); i++) {
-            window[s.charAt(i) - 'a']++;
-            if (i >= p.length()) window[s.charAt(i - p.length()) - 'a']--;
-            if (i >= p.length() - 1 && Arrays.equals(need, window)) {
-                result.add(i - p.length() + 1);
-            }
+        // build the first window and check it
+        for (int i = 0; i < p.length(); i++) {
+            windowCounts[s.charAt(i) - 'a']++;
+        }
+        if (Arrays.equals(patternCounts, windowCounts)) result.add(0);
+
+        // slide the window one character at a time: drop the char leaving on the
+        // left, add the char entering on the right, then check the new window
+        for (int start = 1; start <= s.length() - p.length(); start++) {
+            int charLeaving = s.charAt(start - 1) - 'a';
+            int charEntering = s.charAt(start + p.length() - 1) - 'a';
+
+            windowCounts[charLeaving]--;
+            windowCounts[charEntering]++;
+
+            if (Arrays.equals(patternCounts, windowCounts)) result.add(start);
         }
 
         return result;

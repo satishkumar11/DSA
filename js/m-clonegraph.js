@@ -1,45 +1,55 @@
 // hellointerview: https://www.hellointerview.com/learn/code/depth-first-search/copy-graph
 // Clone Graph
-// Create a deep copy of a connected undirected graph.
+// Given a reference node in an undirected, connected graph, return an adjacency list
+// representation of the graph as a dictionary: each key is a node's value, mapped to
+// a list of its neighbors' values. This isn't a deep copy of the node objects - it's
+// converting the node-and-pointers structure into an equivalent adjacency list.
 //
 // Input: node1 -- node2
-// Output: cloned graph (1' -- 2')
+// Output: {1: [2], 2: [1]}
 //
-// DFS from the given node, using a map from original to clone to avoid
-// recreating (or infinitely revisiting) nodes already copied.
-//
-// Original:  1 -- 2      Clone:  1' -- 2'
+// DFS from the given node: for each unvisited node, record its value and its
+// neighbors' values in the adjacency map, then recurse into each neighbor.
+// Checking the map for that value both marks a node visited and prevents
+// infinite recursion back around the cycle to already-explored nodes.
 //
 // Time: O(V + E), Space: O(V)
-class Node {
-  constructor(val, neighbors = []) {
-    this.val = val;
+class GraphNode {
+  constructor(value, neighbors = []) {
+    this.value = value;
     this.neighbors = neighbors;
   }
 }
 
 function cloneGraph(node) {
-  if (!node) return null;
-  const map = new Map();
-
-  function dfs(n) {
-    if (map.has(n)) return map.get(n);
-    const copy = new Node(n.val);
-    map.set(n, copy);
-    for (const neighbor of n.neighbors) {
-      copy.neighbors.push(dfs(neighbor));
-    }
-    return copy;
+  const adjList = new Map();
+  if (node) {
+    dfs(node, adjList);
   }
-
-  return dfs(node);
+  return adjList;
 }
 
-const a = new Node(1);
-const b = new Node(2);
+function dfs(node, adjList) {
+  if (adjList.has(node.value)) {
+    return;
+  }
+
+  const neighborValues = [];
+  for (const neighbor of node.neighbors) {
+    neighborValues.push(neighbor.value);
+  }
+  adjList.set(node.value, neighborValues);
+
+  for (const neighbor of node.neighbors) {
+    dfs(neighbor, adjList);
+  }
+}
+
+const a = new GraphNode(1);
+const b = new GraphNode(2);
 a.neighbors.push(b);
 b.neighbors.push(a);
-const clone = cloneGraph(a);
-console.log(clone.val, clone.neighbors[0].val); // 1 2
 
-module.exports = { cloneGraph, Node };
+console.log(cloneGraph(a)); // Map(2) { 1 => [ 2 ], 2 => [ 1 ] }
+
+module.exports = { cloneGraph, GraphNode };

@@ -13,7 +13,8 @@ function findMin(nums) {
   let hi = nums.length - 1;
 
   while (lo < hi) {
-    const mid = Math.floor((lo + hi) / 2);
+    const mid = lo + Math.floor((hi - lo) / 2);
+    // const mid = (lo + hi) >> 1;
     if (nums[mid] > nums[hi]) lo = mid + 1;
     else hi = mid;
   }
