@@ -17,6 +17,12 @@ class MiddleOfLinkedList {
         ListNode(int val) { this.val = val; }
     }
 
+    // Trace with 1 -> 2 -> 3 -> 4 -> 5:
+    //   slow=1, fast=1
+    //   fast(1) & fast.next(2) exist -> slow=2, fast=3
+    //   fast(3) & fast.next(4) exist -> slow=3, fast=5
+    //   fast(5) exists but fast.next is null -> loop stops
+    //   return slow -> node 3
     public static ListNode middleNode(ListNode head) {
         ListNode slow = head, fast = head;
 

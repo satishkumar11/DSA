@@ -7,6 +7,11 @@
 // Binary search over version numbers, narrowing toward the first version
 // where isBadVersion returns true.
 //
+// Trace with n = 5, bad = 4 (isBadVersion(v) is true for v >= 4):
+//   lo=1, hi=5: mid=3, isBadVersion(3)=false -> lo=4
+//   lo=4, hi=5: mid=4, isBadVersion(4)=true  -> hi=4
+//   lo == hi (4) -> loop ends -> return 4
+//
 // Time: O(log n), Space: O(1)
 function firstBadVersion(n, isBadVersion) {
   let lo = 1;

@@ -8,6 +8,13 @@
 // Modified binary search: at each step, determine which half of the
 // array is sorted, then check if the target falls in that sorted half.
 //
+// Trace with nums = [4, 5, 6, 7, 0, 1, 2], target = 0:
+//   lo=0, hi=6: mid=3, nums[3]=7. nums[lo]=4<=nums[mid]=7 -> left half sorted.
+//               target(0) in [4,7)? no -> search right half -> lo=4
+//   lo=4, hi=6: mid=5, nums[5]=1. nums[lo]=0<=nums[mid]=1 -> left half sorted.
+//               target(0) in [0,1)? yes -> search left half -> hi=4
+//   lo=4, hi=4: mid=4, nums[4]=0 == target -> return 4
+//
 // Time: O(log n), Space: O(1)
 class SearchRotated {
     public static int search(int[] nums, int target) {

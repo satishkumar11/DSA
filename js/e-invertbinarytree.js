@@ -14,6 +14,18 @@
 //    / \ / \             / \ / \
 //   1  3 6  9           9  6 3  1
 //
+// Trace (bottom-up - leaves invert first, since they're needed before
+// their parent can swap them in):
+//   invertTree(1), invertTree(3): leaves, nothing to swap, unchanged
+//   invertTree(2): left=invertTree(1), right=invertTree(3), then swap
+//                  them -> node 2 now has left=3, right=1
+//   invertTree(6), invertTree(9): leaves, unchanged
+//   invertTree(7): left=invertTree(6), right=invertTree(9), then swap
+//                  -> node 7 now has left=9, right=6
+//   invertTree(4) [root]: left=invertTree(2), right=invertTree(7), then
+//                  swap at the root -> 4's left is now the 7-subtree,
+//                  4's right is now the 2-subtree
+//
 // Time: O(n), Space: O(h)
 class TreeNode {
   constructor(val, left = null, right = null) {

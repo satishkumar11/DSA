@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 // Binary Tree Level Order Traversal
 // Return the node values of a binary tree grouped level by level (BFS).
@@ -7,8 +9,9 @@ import java.util.List;
 // Input: root = [3, 9, 20, null, null, 15, 7]
 // Output: [[3], [9, 20], [15, 7]]
 //
-// Breadth-first search level by level: process the current queue of
-// nodes, collecting their values and queuing their children for the next round.
+// Single queue BFS: snapshot the queue's current size before each level so
+// the loop drains exactly that many nodes (the current level) even though
+// children get added to the same queue during the loop.
 //
 //       3
 //      / \
@@ -28,25 +31,28 @@ class LevelOrderTraversal {
     }
 
     public static List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<>();
-        if (root == null) return result;
+        List<List<Integer>> response = new ArrayList<>();
+        if (root == null) return response;
 
-        List<TreeNode> queue = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
         while (!queue.isEmpty()) {
+            int size = queue.size();
             List<Integer> level = new ArrayList<>();
-            List<TreeNode> next = new ArrayList<>();
-            for (TreeNode node : queue) {
-                level.add(node.val);
-                if (node.left != null) next.add(node.left);
-                if (node.right != null) next.add(node.right);
+
+            for (int i = 0; i < size; i++) {
+                TreeNode queueNode = queue.poll();
+                level.add(queueNode.val);
+
+                if (queueNode.left != null) queue.add(queueNode.left);
+                if (queueNode.right != null) queue.add(queueNode.right);
             }
-            result.add(level);
-            queue = next;
+
+            response.add(level);
         }
 
-        return result;
+        return response;
     }
 
     public static void main(String[] args) {

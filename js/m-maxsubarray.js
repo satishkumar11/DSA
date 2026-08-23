@@ -7,6 +7,18 @@
 // Kadane's algorithm: at each index, either extend the previous subarray
 // or start fresh, keeping whichever running sum is larger.
 //
+// Trace with nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]:
+//   cur=-2, maxSum=-2
+//   1:  cur=max(1, -2+1)=1,   maxSum=1
+//   -3: cur=max(-3, 1-3)=-2,  maxSum stays 1
+//   4:  cur=max(4, -2+4)=4,   maxSum=4      <- restart beats extending
+//   -1: cur=max(-1, 4-1)=3,   maxSum stays 4
+//   2:  cur=max(2, 3+2)=5,    maxSum=5
+//   1:  cur=max(1, 5+1)=6,    maxSum=6      <- best subarray [4,-1,2,1]
+//   -5: cur=max(-5, 6-5)=1,   maxSum stays 6
+//   4:  cur=max(4, 1+4)=5,    maxSum stays 6
+//   maxSum = 6
+//
 // Time: O(n), Space: O(1)
 function maxSubArray(nums) {
   let maxSum = nums[0];
@@ -20,6 +32,27 @@ function maxSubArray(nums) {
   return maxSum;
 }
 
+// Without Kadane's - brute force, check every subarray's sum directly.
+// For each start, extend the end one step at a time, adding the newly
+// included element to a running sum instead of resumming from scratch
+// (that would make it O(n^3) instead of O(n^2)).
+//
+// Time: O(n^2), Space: O(1)
+function maxSubArrayBruteForce(nums) {
+  let maxSum = -Infinity;
+
+  for (let start = 0; start < nums.length; start++) {
+    let sum = 0;
+    for (let end = start; end < nums.length; end++) {
+      sum += nums[end];
+      maxSum = Math.max(maxSum, sum);
+    }
+  }
+
+  return maxSum;
+}
+
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6
+console.log(maxSubArrayBruteForce([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6
 
 module.exports = maxSubArray;

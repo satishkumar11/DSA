@@ -21,6 +21,14 @@ class SameTree {
         TreeNode(int val, TreeNode left, TreeNode right) { this.val = val; this.left = left; this.right = right; }
     }
 
+    // Trace with p = 1(left=2), q = 1(left=2):
+    //   isSameTree(p, q): both non-null, p.val(1) == q.val(1)
+    //     -> isSameTree(p.left=2, q.left=2): both non-null, values match
+    //          -> isSameTree(null, null) = true (both null)
+    //          -> isSameTree(null, null) = true (both null)
+    //          -> true && true = true
+    //     -> isSameTree(p.right=null, q.right=null) = true (both null)
+    //     -> true && true = true
     public static boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) return true;
         if (p == null || q == null || p.val != q.val) return false;

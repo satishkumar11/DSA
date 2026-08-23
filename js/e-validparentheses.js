@@ -8,6 +8,15 @@
 // Push opening brackets onto a stack; on a closing bracket, pop and check
 // it matches the expected opener, failing fast on any mismatch.
 //
+// Trace with s = "()[]{}":
+//   '(' -> push -> stack=[(]
+//   ')' -> pop '(' , matches pairs[')'] -> stack=[]
+//   '[' -> push -> stack=[[]
+//   ']' -> pop '[' , matches pairs[']'] -> stack=[]
+//   '{' -> push -> stack=[{]
+//   '}' -> pop '{' , matches pairs['}'] -> stack=[]
+//   stack empty at the end -> true
+//
 // Time: O(n), Space: O(n)
 function isValid(s) {
   const stack = [];

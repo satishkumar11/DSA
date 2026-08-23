@@ -12,6 +12,15 @@
 //  /         /
 // 2         2
 //
+// Trace with p = 1(left=2), q = 1(left=2):
+//   isSameTree(p, q): both non-null, p.val(1) === q.val(1)
+//     -> isSameTree(p.left=2, q.left=2): both non-null, values match
+//          -> isSameTree(null, null) = true (both null)
+//          -> isSameTree(null, null) = true (both null)
+//          -> true && true = true
+//     -> isSameTree(p.right=null, q.right=null) = true (both null)
+//     -> true && true = true
+//
 // Time: O(n), Space: O(h)
 class TreeNode {
   constructor(val, left = null, right = null) {

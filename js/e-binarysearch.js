@@ -7,6 +7,10 @@
 // Repeatedly halve the search range, comparing the middle element to the
 // target and discarding the half that can't contain it.
 //
+// Trace with nums = [-1, 0, 3, 5, 9, 12], target = 9:
+//   lo=0, hi=5: mid=2, nums[2]=3 < 9   -> lo=3
+//   lo=3, hi=5: mid=4, nums[4]=9 == 9  -> return 4
+//
 // Time: O(log n), Space: O(1)
 function binarySearch(nums, target) {
   let lo = 0;

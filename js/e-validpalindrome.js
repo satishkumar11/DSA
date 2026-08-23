@@ -7,6 +7,12 @@
 // Two pointers from both ends, skipping non-alphanumeric characters and
 // comparing letters case-insensitively until they meet in the middle.
 //
+// Trace with s = "A man, a plan, a canal: Panama" (spaces/punctuation skipped):
+//   l='A', r='a' -> equal case-insensitively -> l++, r--
+//   l='m', r='m' -> equal -> continue
+//   ... pointers keep meeting equal letters (a/a, n/n, ...) all the way in
+//   pointers cross in the middle having never found a mismatch -> true
+//
 // Time: O(n), Space: O(1)
 function isPalindrome(s) {
   let l = 0;

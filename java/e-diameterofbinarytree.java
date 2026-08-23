@@ -25,6 +25,13 @@ class DiameterOfBinaryTree {
         TreeNode(int val, TreeNode left, TreeNode right) { this.val = val; this.left = left; this.right = right; }
     }
 
+    // Trace (post-order, so leaves resolve before their parents):
+    //   depth(4): leaf -> left=0, right=0, diameter=max(0, 0)=0, returns 1
+    //   depth(5): leaf -> same as above, diameter stays 0, returns 1
+    //   depth(2): left=depth(4)=1, right=depth(5)=1, diameter=max(0, 1+1)=2, returns 2
+    //   depth(3): leaf -> diameter stays max(2, 0)=2, returns 1
+    //   depth(1): left=depth(2)=2, right=depth(3)=1, diameter=max(2, 2+1)=3, returns 3
+    //   final diameter = 3 (path 4-2-1-3: 3 edges)
     private static int diameter = 0;
 
     public static int diameterOfBinaryTree(TreeNode root) {

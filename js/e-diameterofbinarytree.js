@@ -16,6 +16,14 @@
 //
 // Longest path: 4 - 2 - 1 - 3 (diameter = 3 edges)
 //
+// Trace (post-order, so leaves resolve before their parents):
+//   depth(4): leaf -> left=0, right=0, diameter=max(0, 0)=0, returns 1
+//   depth(5): leaf -> same as above, diameter stays 0, returns 1
+//   depth(2): left=depth(4)=1, right=depth(5)=1, diameter=max(0, 1+1)=2, returns 2
+//   depth(3): leaf -> diameter stays max(2, 0)=2, returns 1
+//   depth(1): left=depth(2)=2, right=depth(3)=1, diameter=max(2, 2+1)=3, returns 3
+//   final diameter = 3 (path 4-2-1-3: 3 edges)
+//
 // Time: O(n), Space: O(h)
 class TreeNode {
   constructor(val, left = null, right = null) {

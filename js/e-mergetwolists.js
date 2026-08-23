@@ -19,6 +19,14 @@ class ListNode {
   }
 }
 
+// Trace with l1 = [1, 2, 4], l2 = [1, 3, 4]:
+//   1 vs 1: l1's 1 <= l2's 1 -> take l1's 1, l1=[2,4]
+//   2 vs 1: not <=          -> take l2's 1, l2=[3,4]
+//   2 vs 3: 2 <= 3          -> take l1's 2, l1=[4]
+//   4 vs 3: not <=          -> take l2's 3, l2=[4]
+//   4 vs 4: 4 <= 4          -> take l1's 4, l1=[]
+//   l1 exhausted -> append whatever's left of l2 -> 4
+//   result: 1, 1, 2, 3, 4, 4
 function mergeTwoLists(l1, l2) {
   const dummy = new ListNode(0);
   let cur = dummy;

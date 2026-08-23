@@ -13,6 +13,14 @@
 // 0 0 1 0
 // 0 0 0 1
 //
+// Trace: scanning row by row, left to right:
+//   (0,0)='1' -> count=1, DFS floods the whole connected top-left block:
+//                (0,0),(0,1),(1,0),(1,1) all turn to '0'
+//   scan continues, skipping the now-zeroed cells and the water cells,
+//   until (2,2)='1' -> count=2, DFS floods just (2,2) (all 4 neighbors are '0')
+//   until (3,3)='1' -> count=3, DFS floods just (3,3) (all 4 neighbors are '0')
+//   count = 3
+//
 // Time: O(rows * cols), Space: O(rows * cols) recursion stack
 function numIslands(grid) {
   if (!grid.length) return 0;

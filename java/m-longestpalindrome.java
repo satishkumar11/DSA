@@ -7,6 +7,14 @@
 // Expand around every possible center (both single and double character)
 // and track the widest palindrome found.
 //
+// Trace with s = "babad":
+//   i=0 'b': odd-center "b" len 1, even-center "ba" len 0 -> best stays "" (len 1 not > current 1)
+//   i=1 'a': odd-center expands "b|a|b" -> "bab" len 3, even-center "ab" len 0
+//            3 > current best(1) -> best = "bab" (start=0, end=2)
+//   i=2 'b': odd-center expands "a|b|a" -> "aba" len 3, but 3 is not > current best(3) -> no change
+//   i=3,4:   nothing beats length 3
+//   result: "bab" (the algorithm keeps the first length-3 palindrome it finds)
+//
 // Time: O(n^2), Space: O(1)
 class LongestPalindrome {
     private static String s;

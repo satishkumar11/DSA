@@ -20,6 +20,10 @@ class DetectCycle {
         ListNode(int val) { this.val = val; }
     }
 
+    // Trace with the 2-node cycle above (a=1, b=2, a.next=b, b.next=a):
+    //   slow=a, fast=a
+    //   step1: slow=a.next=b, fast=a.next.next=b.next=a -> b != a, keep going
+    //   step2: slow=b.next=a, fast=a.next.next=a        -> a == a -> true
     public static boolean hasCycle(ListNode head) {
         ListNode slow = head, fast = head;
 
@@ -36,6 +40,10 @@ class DetectCycle {
     //
     // Same tortoise/hare meeting point as above, then reset one pointer to
     // head; advancing both by one step now meets exactly at the cycle start.
+    //
+    // Trace with the same 2-node cycle: slow and fast already meet at node a
+    // (see hasCycle's trace above), which happens to be the cycle's start here.
+    // ptr=head=a, and slow is already a, so the second loop never runs -> returns a (value 1).
     //
     // Time: O(n), Space: O(1)
     public static ListNode detectCycleStart(ListNode head) {

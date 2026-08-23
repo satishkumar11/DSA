@@ -25,6 +25,12 @@ class MaxDepthBinaryTree {
         TreeNode(int val, TreeNode left, TreeNode right) { this.val = val; this.left = left; this.right = right; }
     }
 
+    // Trace (bottom-up, since each call needs its children's results first):
+    //   maxDepth(9)  = leaf -> 1 + max(0, 0) = 1
+    //   maxDepth(15) = leaf -> 1 + max(0, 0) = 1
+    //   maxDepth(7)  = leaf -> 1 + max(0, 0) = 1
+    //   maxDepth(20) = 1 + max(maxDepth(15), maxDepth(7)) = 1 + max(1, 1) = 2
+    //   maxDepth(3)  = 1 + max(maxDepth(9), maxDepth(20)) = 1 + max(1, 2) = 3
     public static int maxDepth(TreeNode root) {
         if (root == null) return 0;
         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));

@@ -11,6 +11,13 @@
 //    / \
 //   5   1
 //
+// Trace with root = 3(left=p, right=q):
+//   lowestCommonAncestor(3, p, q): root is neither p nor q -> recurse both sides
+//     left:  lowestCommonAncestor(p, p, q) -> root === p -> returns p
+//     right: lowestCommonAncestor(q, p, q) -> root === q -> returns q
+//   both left and right are truthy -> p and q were found on opposite sides
+//   -> the current node (3) is the LCA -> return 3
+//
 // Time: O(n), Space: O(h)
 class TreeNode {
   constructor(val, left = null, right = null) {

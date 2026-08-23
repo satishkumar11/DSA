@@ -15,6 +15,12 @@
 //                            / \
 //                           3   6
 //
+// Trace with root = 2(left=1, right=3):
+//   isValidBST(2, -inf, inf): 2 is within range -> recurse
+//     left:  isValidBST(1, -inf, 2): 1 is within range -> both children null -> true
+//     right: isValidBST(3, 2, inf):  3 is within range -> both children null -> true
+//   true && true -> true
+//
 // Time: O(n), Space: O(h)
 class ValidateBST {
     static class TreeNode {

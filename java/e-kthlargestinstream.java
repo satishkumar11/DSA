@@ -10,6 +10,12 @@ import java.util.PriorityQueue;
 // smallest element is always the current kth largest.
 //
 // add: O(log k)
+//
+// Trace: constructor adds 4, 5, 8, 2 one at a time (k=3) - after all four,
+// the smallest (2) has been evicted, leaving the heap holding {4, 5, 8}.
+//   add(3):  heap={4,5,8,3} -> evict smallest -> {4,5,8}  -> peek returns 4
+//   add(5):  heap={4,5,8,5} -> evict smallest -> {5,5,8}  -> peek returns 5
+//   add(10): heap={5,5,8,10} -> evict smallest -> {5,8,10} -> peek returns 5
 class KthLargestInStream {
     private final PriorityQueue<Integer> heap;
     private final int k;

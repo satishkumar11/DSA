@@ -11,6 +11,13 @@
 // Before: 1 -> 2 -> 3 -> 4 -> 5   (n = 2, so remove the 4)
 // After:  1 -> 2 -> 3 -> 5
 //
+// Trace with 1 -> 2 -> 3 -> 4 -> 5, n = 2:
+//   fast starts n=2 steps ahead of slow: fast=node2, slow=dummy
+//   advance both together until fast.next is null:
+//     fast=3, slow=1  ->  fast=4, slow=2  ->  fast=5, slow=3 (fast.next=null, stop)
+//   slow (node 3) now sits right before the node to remove -> skip node 4
+//   slow.next = slow.next.next -> 1 -> 2 -> 3 -> 5
+//
 // Time: O(n), Space: O(1)
 class RemoveNthNode {
     static class ListNode {

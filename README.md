@@ -16,6 +16,9 @@ Problems flagged for another pass before the interview.
 
 - [Merge Sorted Array](js/e-mergesortedarray.js) ([java](java/e-mergesortedarray.java))
 - [Remove Duplicates from Sorted Array](js/e-removeduplicates.js) ([java](java/e-removeduplicates.java))
+- [Koko Eating Bananas](js/m-kokoeatingbananas.js) ([java](java/m-kokoeatingbananas.java))
+- [Longest Repeating Character Replacement](js/m-longestrepeatingcharreplacement.js) ([java](java/m-longestrepeatingcharreplacement.java))
+- [Lowest Common Ancestor of a Binary Tree](js/m-lowestcommonancestor.js) ([java](java/m-lowestcommonancestor.java))
 
 ## Easy (30)
 
@@ -74,7 +77,7 @@ Problems flagged for another pass before the interview.
 | 16 | LRU Cache | [m-lrucache.js](js/m-lrucache.js) | [m-lrucache.java](java/m-lrucache.java) |
 | 17 | Binary Tree Level Order Traversal | [m-levelordertraversal.js](js/m-levelordertraversal.js) | [m-levelordertraversal.java](java/m-levelordertraversal.java) |
 | 18 | Validate Binary Search Tree | [m-validatebst.js](js/m-validatebst.js) | [m-validatebst.java](java/m-validatebst.java) |
-| 19 | Lowest Common Ancestor of a Binary Tree | [m-lowestcommonancestor.js](js/m-lowestcommonancestor.js) | [m-lowestcommonancestor.java](java/m-lowestcommonancestor.java) |
+| 19 | Lowest Common Ancestor of a Binary Tree 🔁 | [m-lowestcommonancestor.js](js/m-lowestcommonancestor.js) | [m-lowestcommonancestor.java](java/m-lowestcommonancestor.java) |
 | 20 | Number of Islands | [m-numberofislands.js](js/m-numberofislands.js) | [m-numberofislands.java](java/m-numberofislands.java) |
 | 21 | Course Schedule | [m-courseschedule.js](js/m-courseschedule.js) | [m-courseschedule.java](java/m-courseschedule.java) |
 | 22 | Clone Graph | [m-clonegraph.js](js/m-clonegraph.js) | [m-clonegraph.java](java/m-clonegraph.java) |
@@ -85,10 +88,10 @@ Problems flagged for another pass before the interview.
 | 27 | String Compression | [m-stringcompression.js](js/m-stringcompression.js) | [m-stringcompression.java](java/m-stringcompression.java) |
 | 28 | Permutation in String | [m-permutationinstring.js](js/m-permutationinstring.js) | [m-permutationinstring.java](java/m-permutationinstring.java) |
 | 29 | Find All Anagrams in a String | [m-findallanagrams.js](js/m-findallanagrams.js) | [m-findallanagrams.java](java/m-findallanagrams.java) |
-| 30 | Longest Repeating Character Replacement | [m-longestrepeatingcharreplacement.js](js/m-longestrepeatingcharreplacement.js) | [m-longestrepeatingcharreplacement.java](java/m-longestrepeatingcharreplacement.java) |
+| 30 | Longest Repeating Character Replacement 🔁 | [m-longestrepeatingcharreplacement.js](js/m-longestrepeatingcharreplacement.js) | [m-longestrepeatingcharreplacement.java](java/m-longestrepeatingcharreplacement.java) |
 | 31 | Fruit Into Baskets | [m-fruitintobaskets.js](js/m-fruitintobaskets.js) | [m-fruitintobaskets.java](java/m-fruitintobaskets.java) |
 | 32 | Find Peak Element | [m-findpeakelement.js](js/m-findpeakelement.js) | [m-findpeakelement.java](java/m-findpeakelement.java) |
-| 33 | Koko Eating Bananas | [m-kokoeatingbananas.js](js/m-kokoeatingbananas.js) | [m-kokoeatingbananas.java](java/m-kokoeatingbananas.java) |
+| 33 | Koko Eating Bananas 🔁 | [m-kokoeatingbananas.js](js/m-kokoeatingbananas.js) | [m-kokoeatingbananas.java](java/m-kokoeatingbananas.java) |
 | 34 | Remove Nth Node From End of List | [m-removenthnode.js](js/m-removenthnode.js) | [m-removenthnode.java](java/m-removenthnode.java) |
 | 35 | Min Stack | [m-minstack.js](js/m-minstack.js) | [m-minstack.java](java/m-minstack.java) |
 | 36 | Daily Temperatures | [m-dailytemperatures.js](js/m-dailytemperatures.js) | [m-dailytemperatures.java](java/m-dailytemperatures.java) |

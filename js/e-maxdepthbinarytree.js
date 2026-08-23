@@ -16,6 +16,13 @@
 //
 // Depth = 3 (path 3 -> 20 -> 15)
 //
+// Trace (bottom-up, since each call needs its children's results first):
+//   maxDepth(9)  = leaf -> 1 + max(0, 0) = 1
+//   maxDepth(15) = leaf -> 1 + max(0, 0) = 1
+//   maxDepth(7)  = leaf -> 1 + max(0, 0) = 1
+//   maxDepth(20) = 1 + max(maxDepth(15), maxDepth(7)) = 1 + max(1, 1) = 2
+//   maxDepth(3)  = 1 + max(maxDepth(9), maxDepth(20)) = 1 + max(1, 2) = 3
+//
 // Time: O(n), Space: O(h)
 class TreeNode {
   constructor(val, left = null, right = null) {

@@ -11,6 +11,17 @@ import java.util.List;
 // Backtracking with reuse allowed: at each step either include the
 // current candidate again or move on to the next one, until the target hits zero.
 //
+// Trace with candidates = [2, 3, 6, 7], target = 7 (start index stays the
+// same on reuse, so a candidate can be picked again, but never an earlier one):
+//   pick 2, 2, 2: remaining 1, nothing fits (2>1, 3>1, ...) -> dead end, backtrack
+//   pick 2, 2, 3: remaining 0 -> found [2, 2, 3]
+//   pick 2, 3, ...: remaining 2, nothing fits exactly -> dead end
+//   pick 2, 6 / 2, 7: overshoots to negative -> dead end
+//   pick 3, 3, ... / 3, 6 / 3, 7: all overshoot or dead-end
+//   pick 6, 6 / 6, 7: overshoot -> dead end
+//   pick 7: remaining 0 -> found [7]
+//   result: [[2, 2, 3], [7]]
+//
 // Time: O(2^target) worst case, Space: O(target)
 class CombinationSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {

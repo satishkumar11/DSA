@@ -7,6 +7,11 @@
 // Trim and split the string on whitespace, reverse the resulting word
 // list, and join with single spaces.
 //
+// Trace with s = "  the sky is blue  ":
+//   trim() -> "the sky is blue"
+//   split("\\s+") -> ["the", "sky", "is", "blue"]
+//   iterate in reverse, joining with spaces -> "blue is sky the"
+//
 // Time: O(n), Space: O(n)
 class ReverseWords {
     public static String reverseWords(String s) {

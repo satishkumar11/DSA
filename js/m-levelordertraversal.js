@@ -4,8 +4,9 @@
 // Input: root = [3, 9, 20, null, null, 15, 7]
 // Output: [[3], [9, 20], [15, 7]]
 //
-// Breadth-first search level by level: process the current queue of
-// nodes, collecting their values and queuing their children for the next round.
+// Single queue BFS: snapshot the queue's current size before each level so
+// the loop drains exactly that many nodes (the current level) even though
+// children get pushed onto the same queue during the loop.
 //
 //       3
 //      / \
@@ -25,23 +26,27 @@ class TreeNode {
 }
 
 function levelOrder(root) {
-  if (!root) return [];
-  const result = [];
-  let queue = [root];
+  const response = [];
+  if (!root) return response;
+
+  const queue = [root];
 
   while (queue.length) {
+    const size = queue.length;
     const level = [];
-    const next = [];
-    for (const node of queue) {
-      level.push(node.val);
-      if (node.left) next.push(node.left);
-      if (node.right) next.push(node.right);
+
+    for (let i = 0; i < size; i++) {
+      const queueNode = queue.shift();
+      level.push(queueNode.val);
+
+      if (queueNode.left) queue.push(queueNode.left);
+      if (queueNode.right) queue.push(queueNode.right);
     }
-    result.push(level);
-    queue = next;
+
+    response.push(level);
   }
 
-  return result;
+  return response;
 }
 
 const root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));

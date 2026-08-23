@@ -8,6 +8,14 @@
 // Sort the array, fix one number, then use two pointers moving inward
 // from both ends to find pairs that complete the triplet to zero.
 //
+// Trace with nums = [-1, 0, 1, 2, -1, -4], sorted -> [-4, -1, -1, 0, 1, 2]:
+//   i=0 (-4): every l/r pair sums < 0 (biggest possible is -4-1+2=-3) -> no triplet
+//   i=1 (-1): l=2,r=5 -> -1+(-1)+2=0 -> found [-1,-1,2]; l++,r-- -> l=3,r=4
+//             -1+0+1=0 -> found [-1,0,1]; l++,r-- -> l=4,r=3, loop ends
+//   i=2 (-1): same value as i=1 -> skip (avoids a duplicate triplet)
+//   i=3 (0):  l=4,r=5 -> 0+1+2=3 > 0 -> r--, loop ends with nothing found
+//   result: [[-1,-1,2], [-1,0,1]]
+//
 // Time: O(n^2), Space: O(1) excluding output
 function threeSum(nums) {
   nums.sort((a, b) => a - b);

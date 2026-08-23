@@ -7,6 +7,11 @@
 // Sort each string's characters to build a canonical key, then group
 // original strings by that key in a hash map.
 //
+// Trace with strs = ["eat","tea","tan","ate","nat","bat"] (sorted-letters key):
+//   eat -> "aet"   tea -> "aet"   tan -> "ant"
+//   ate -> "aet"   nat -> "ant"   bat -> "abt"
+//   groups: "aet"->[eat,tea,ate], "ant"->[tan,nat], "abt"->[bat]
+//
 // Time: O(n * k log k), Space: O(n * k)
 function groupAnagrams(strs) {
   const map = new Map();

@@ -7,6 +7,10 @@ import java.util.Set;
 // Input: nums = [1, 2, 3, 1]
 // Output: true
 //
+// Trace with nums = [1, 2, 3, 1]: add 1, 2, 3 to the set with no matches,
+// then hit 1 again - it's already in the set -> return true immediately
+// (no need to scan the rest of the array).
+//
 // Add each number to a hash set while scanning; if a number is already
 // in the set, a duplicate has been found.
 //
