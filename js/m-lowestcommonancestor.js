@@ -35,9 +35,38 @@ function lowestCommonAncestor(root, p, q) {
   return left || right;
 }
 
+// Alternate approach: record the root-to-node path for p and q in an
+// array, then walk both paths together - the last node where they still
+// match is the LCA.
+//
+// Time: O(n), Space: O(n)
+function lowestCommonAncestorUsingPath(root, p, q) {
+  const pathToP = [];
+  const pathToQ = [];
+  findPath(root, p, pathToP);
+  findPath(root, q, pathToQ);
+
+  let lca = null;
+  for (let i = 0; i < pathToP.length && i < pathToQ.length; i++) {
+    if (pathToP[i] !== pathToQ[i]) break;
+    lca = pathToP[i];
+  }
+  return lca;
+}
+
+function findPath(node, target, path) {
+  if (!node) return false;
+  path.push(node);
+  if (node === target) return true;
+  if (findPath(node.left, target, path) || findPath(node.right, target, path)) return true;
+  path.pop();
+  return false;
+}
+
 const p = new TreeNode(5);
 const q = new TreeNode(1);
 const root = new TreeNode(3, p, q);
 console.log(lowestCommonAncestor(root, p, q).val); // 3
+console.log(lowestCommonAncestorUsingPath(root, p, q).val); // 3
 
-module.exports = { lowestCommonAncestor, TreeNode };
+module.exports = { lowestCommonAncestor, lowestCommonAncestorUsingPath, TreeNode };

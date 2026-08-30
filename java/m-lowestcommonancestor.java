@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 // Lowest Common Ancestor of a Binary Tree
 // Find the lowest node that has both given nodes as descendants.
 //
@@ -35,10 +38,39 @@ class LowestCommonAncestor {
         return left != null ? left : right;
     }
 
+    // Alternate approach: record the root-to-node path for p and q in an
+    // ArrayList, then walk both paths together - the last node where they
+    // still match is the LCA.
+    //
+    // Time: O(n), Space: O(n)
+    public static TreeNode lowestCommonAncestorUsingPath(TreeNode root, TreeNode p, TreeNode q) {
+        List<TreeNode> pathToP = new ArrayList<>();
+        List<TreeNode> pathToQ = new ArrayList<>();
+        findPath(root, p, pathToP);
+        findPath(root, q, pathToQ);
+
+        TreeNode lca = null;
+        for (int i = 0; i < pathToP.size() && i < pathToQ.size(); i++) {
+            if (pathToP.get(i) != pathToQ.get(i)) break;
+            lca = pathToP.get(i);
+        }
+        return lca;
+    }
+
+    private static boolean findPath(TreeNode node, TreeNode target, List<TreeNode> path) {
+        if (node == null) return false;
+        path.add(node);
+        if (node == target) return true;
+        if (findPath(node.left, target, path) || findPath(node.right, target, path)) return true;
+        path.remove(path.size() - 1);
+        return false;
+    }
+
     public static void main(String[] args) {
         TreeNode p = new TreeNode(5);
         TreeNode q = new TreeNode(1);
         TreeNode root = new TreeNode(3, p, q);
         System.out.println(lowestCommonAncestor(root, p, q).val); // 3
+        System.out.println(lowestCommonAncestorUsingPath(root, p, q).val); // 3
     }
 }

@@ -1,6 +1,6 @@
 # DSA — Deloitte Interview Prep
 
-76 data structures & algorithms problems, solved in both JavaScript and Java, curated for a
+88 data structures & algorithms problems, solved in both JavaScript and Java, curated for a
 Deloitte SDE interview (DSA + system design round). Solutions live in [js/](js/) and [java/](java/),
 with filenames prefixed by difficulty: `e-` (easy), `m-` (medium), `h-` (hard).
 
@@ -20,7 +20,7 @@ Problems flagged for another pass before the interview.
 - [Longest Repeating Character Replacement](js/m-longestrepeatingcharreplacement.js) ([java](java/m-longestrepeatingcharreplacement.java))
 - [Lowest Common Ancestor of a Binary Tree](js/m-lowestcommonancestor.js) ([java](java/m-lowestcommonancestor.java))
 
-## Easy (30)
+## Easy (38)
 
 | # | Problem | JavaScript | Java |
 | --- | --- | --- | --- |
@@ -54,8 +54,16 @@ Problems flagged for another pass before the interview.
 | 28 | Invert Binary Tree | [e-invertbinarytree.js](js/e-invertbinarytree.js) | [e-invertbinarytree.java](java/e-invertbinarytree.java) |
 | 29 | Same Tree | [e-sametree.js](js/e-sametree.js) | [e-sametree.java](java/e-sametree.java) |
 | 30 | Flood Fill | [e-floodfill.js](js/e-floodfill.js) | [e-floodfill.java](java/e-floodfill.java) |
+| 31 | Symmetric Tree | [e-symmetrictree.js](js/e-symmetrictree.js) | [e-symmetrictree.java](java/e-symmetrictree.java) |
+| 32 | Balanced Binary Tree | [e-balancedbinarytree.js](js/e-balancedbinarytree.js) | [e-balancedbinarytree.java](java/e-balancedbinarytree.java) |
+| 33 | Single Number | [e-singlenumber.js](js/e-singlenumber.js) | [e-singlenumber.java](java/e-singlenumber.java) |
+| 34 | Two Sum II - Input Array Is Sorted | [e-twosumsorted.js](js/e-twosumsorted.js) | [e-twosumsorted.java](java/e-twosumsorted.java) |
+| 35 | Pascal's Triangle | [e-pascalstriangle.js](js/e-pascalstriangle.js) | [e-pascalstriangle.java](java/e-pascalstriangle.java) |
+| 36 | Happy Number | [e-happynumber.js](js/e-happynumber.js) | [e-happynumber.java](java/e-happynumber.java) |
+| 37 | Second Largest Element in an Array (2nd variant) | [e-find2ndlargestnumber.js](js/e-find2ndlargestnumber.js) | [e-find2ndlargestnumber.java](java/e-find2ndlargestnumber.java) |
+| 38 | Reverse a String | [e-reverseastring.js](js/e-reverseastring.js) | [e-reverseastring.java](java/e-reverseastring.java) |
 
-## Medium (37)
+## Medium (41)
 
 | # | Problem | JavaScript | Java |
 | --- | --- | --- | --- |
@@ -96,6 +104,10 @@ Problems flagged for another pass before the interview.
 | 35 | Min Stack | [m-minstack.js](js/m-minstack.js) | [m-minstack.java](java/m-minstack.java) |
 | 36 | Daily Temperatures | [m-dailytemperatures.js](js/m-dailytemperatures.js) | [m-dailytemperatures.java](java/m-dailytemperatures.java) |
 | 37 | Combination Sum | [m-combinationsum.js](js/m-combinationsum.js) | [m-combinationsum.java](java/m-combinationsum.java) |
+| 38 | Merge Intervals | [m-mergeintervals.js](js/m-mergeintervals.js) | [m-mergeintervals.java](java/m-mergeintervals.java) |
+| 39 | Meeting Rooms II | [m-meetingrooms.js](js/m-meetingrooms.js) | [m-meetingrooms.java](java/m-meetingrooms.java) |
+| 40 | Rotate Array | [m-rotatearray.js](js/m-rotatearray.js) | [m-rotatearray.java](java/m-rotatearray.java) |
+| 41 | Kth Smallest Element in a BST | [m-kthsmallestbst.js](js/m-kthsmallestbst.js) | [m-kthsmallestbst.java](java/m-kthsmallestbst.java) |
 
 ## Hard (9)
 

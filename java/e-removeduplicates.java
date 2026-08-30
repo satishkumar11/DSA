@@ -1,4 +1,10 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 // Remove Duplicates from Sorted Array
 // Remove duplicates in place from a sorted array and return the new length.
@@ -21,7 +27,8 @@ import java.util.Arrays;
 //   loop ends -> return writeIndex = 3
 class RemoveDuplicates {
     public static int removeDuplicates(int[] nums) {
-        if (nums.length == 0) return 0;
+        if (nums.length == 0)
+            return 0;
         int writeIndex = 1;
 
         for (int i = 1; i < nums.length; i++) {
@@ -34,8 +41,32 @@ class RemoveDuplicates {
         return writeIndex;
     }
 
+    public static List<Integer> usingMap(int[] nums) {
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+        for (int no : nums) {
+            map.put(no, map.getOrDefault(no, 0) + 1);
+        }
+        List<Integer> res = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            res.add(entry.getKey());
+        }
+        return res;
+    }
+
+    public static List<Integer> usingSet(int[] nums) {
+        Set<Integer> set = new LinkedHashSet<>();
+
+        for (int no : nums) {
+            set.add(no);
+        }
+        return new ArrayList<>(set);
+    }
+
     public static void main(String[] args) {
-        int[] nums = {1, 1, 2, 2, 3};
-        System.out.println(removeDuplicates(nums) + " " + Arrays.toString(nums)); // 3 [1, 2, 3, 2, 3]
+        int[] nums = { 1, 1, 2, 2, 3 };
+        int length = removeDuplicates(nums);
+        System.out.println(length + " " + Arrays.toString(Arrays.copyOf(nums, length))); // 3 [1, 2, 3]
+
+        System.out.println(usingMap(new int[] { 1, 1, 2, 2, 3 }));
     }
 }
