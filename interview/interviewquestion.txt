@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+
+                          
+
+          CDN               Redis
+
+Client -> LB -> AS1,2.  > DB (MySQL) + (MongoDB) + (PostgreDB)
+
+                Queue   
+
+Context Refresh (Spring Boot refresh data)

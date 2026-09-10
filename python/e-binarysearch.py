@@ -1,0 +1,31 @@
+# Binary Search
+# Find the index of a target value in a sorted array.
+#
+# Input: nums = [-1, 0, 3, 5, 9, 12], target = 9
+# Output: 4
+#
+# Repeatedly halve the search range, comparing the middle element to the
+# target and discarding the half that can't contain it.
+#
+# Trace with nums = [-1, 0, 3, 5, 9, 12], target = 9:
+#   lo=0, hi=5: mid=2, nums[2]=3 < 9   -> lo=3
+#   lo=3, hi=5: mid=4, nums[4]=9 == 9  -> return 4
+#
+# Time: O(log n), Space: O(1)
+def binary_search(nums, target):
+    lo = 0
+    hi = len(nums) - 1
+
+    while lo <= hi:
+        mid = lo + (hi - lo) // 2
+        if nums[mid] == target:
+            return mid
+        if nums[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+
+    return -1
+
+
+print(binary_search([-1, 0, 3, 5, 9, 12], 9))  # 4

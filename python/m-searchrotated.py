@@ -1,0 +1,42 @@
+# hellointerview: https://www.hellointerview.com/learn/code/binary-search/search-in-rotated-sorted-array
+# Search in Rotated Sorted Array
+# Find a target's index in a sorted array that has been rotated at an unknown pivot.
+#
+# Input: nums = [4, 5, 6, 7, 0, 1, 2], target = 0
+# Output: 4
+#
+# Modified binary search: at each step, determine which half of the
+# array is sorted, then check if the target falls in that sorted half.
+#
+# Trace with nums = [4, 5, 6, 7, 0, 1, 2], target = 0:
+#   lo=0, hi=6: mid=3, nums[3]=7. nums[lo]=4<=nums[mid]=7 -> left half sorted.
+#               target(0) in [4,7)? no -> search right half -> lo=4
+#   lo=4, hi=6: mid=5, nums[5]=1. nums[lo]=0<=nums[mid]=1 -> left half sorted.
+#               target(0) in [0,1)? yes -> search left half -> hi=4
+#   lo=4, hi=4: mid=4, nums[4]=0 == target -> return 4
+#
+# Time: O(log n), Space: O(1)
+def search(nums, target):
+    lo = 0
+    hi = len(nums) - 1
+
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if nums[mid] == target:
+            return mid
+
+        if nums[lo] <= nums[mid]:
+            if nums[lo] <= target and target < nums[mid]:
+                hi = mid - 1
+            else:
+                lo = mid + 1
+        else:
+            if nums[mid] < target and target <= nums[hi]:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+
+    return -1
+
+
+print(search([4, 5, 6, 7, 0, 1, 2], 0))  # 4

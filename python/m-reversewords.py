@@ -1,0 +1,24 @@
+# Reverse Words in a String
+# Reverse the order of words in a sentence, collapsing extra whitespace.
+#
+# Input: s = "  the sky is blue  "
+# Output: "blue is sky the"
+#
+# Trim and split the string on whitespace, reverse the resulting word
+# list, and join with single spaces.
+#
+# Trace with s = "  the sky is blue  ":
+#   strip() -> "the sky is blue"
+#   split() -> ["the", "sky", "is", "blue"]
+#   reverse() -> ["blue", "is", "sky", "the"]
+#   join(' ') -> "blue is sky the"
+#
+# Time: O(n), Space: O(n)
+def reverse_words(s):
+    trimmed = s.strip()
+    words = trimmed.split()
+    words.reverse()
+    return ' '.join(words)
+
+
+print(reverse_words('  the sky is blue  '))  # "blue is sky the"

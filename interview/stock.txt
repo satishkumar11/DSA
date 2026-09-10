@@ -1,0 +1,70 @@
+
+
+
+
+Prices = [10, 15, 5, 20, 25, 12, 30]
+1 unit daily
+
+
+
+[10, 15, 10, 16]
+losse 1 rupee per daily (holding charge)
+
+10 -> 15 (profit (15-10-1))
+profit = 4 rupee
+
+1st day bought 10
+4th day sold 16 
+profit = 16-10-3 = 3 rupee 
+
+
+
+Response: Which day I should sell
+
+
+minPrice = 1000000
+maxProfit = 0
+
+buyPerday = 0;
+stocks = 0;
+
+
+prices = [10, 15, 11, 16, 14, 17]
+
+for each day 1 to d:
+
+    buyPerday+=price[d]
+    stocks++
+
+    if(stocks>1):
+        revenue = price[d] * stocks
+        holdingDayCost = d
+
+        cost = buyPerday - price[d]
+        actualProfit = revenue - cost - holdingDayCost
+
+        if(actualProfit > maxProfit):
+            maxProfit = actualProfit
+            sellDay = day
+    
+    return sellDay
+    
+
+    if price[d] < minPrice:
+        minPrice = price[d];
+        buyDay = d;
+
+    holdingDays = d - buyDay;
+    profit = price[d] - minPrice - holdingDays
+
+    if(profit > maxProfit):
+        maxProfit = profit;
+        sellDay = d
+
+    if(maxProfit > 0):
+        return sellDay
+    else:
+        return "No trade"
+    
+
+

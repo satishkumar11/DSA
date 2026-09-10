@@ -63,7 +63,7 @@ Problems flagged for another pass before the interview.
 | 37 | Second Largest Element in an Array (2nd variant) | [e-find2ndlargestnumber.js](js/e-find2ndlargestnumber.js) | [e-find2ndlargestnumber.java](java/e-find2ndlargestnumber.java) |
 | 38 | Reverse a String | [e-reverseastring.js](js/e-reverseastring.js) | [e-reverseastring.java](java/e-reverseastring.java) |
 
-## Medium (41)
+## Medium (42)
 
 | # | Problem | JavaScript | Java |
 | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ Problems flagged for another pass before the interview.
 | 3 | Product of Array Except Self | [m-productexceptself.js](js/m-productexceptself.js) | [m-productexceptself.java](java/m-productexceptself.java) |
 | 4 | Longest Consecutive Sequence | [m-longestconsecutive.js](js/m-longestconsecutive.js) | [m-longestconsecutive.java](java/m-longestconsecutive.java) |
 | 5 | Subarray Sum Equals K | [m-subarraysumk.js](js/m-subarraysumk.js) | [m-subarraysumk.java](java/m-subarraysumk.java) |
-| 6 | Maximum Subarray | [m-maxsubarray.js](js/m-maxsubarray.js) | [m-maxsubarray.java](java/m-maxsubarray.java) |
+| 6 | Maximum Subarray | [m-maxsubarraysum.js](js/m-maxsubarraysum.js) | [m-maxsubarraysum.java](java/m-maxsubarraysum.java) |
 | 7 | Longest Substring Without Repeating Characters | [m-longestsubstring.js](js/m-longestsubstring.js) | [m-longestsubstring.java](java/m-longestsubstring.java) |
 | 8 | 3Sum | [m-3sum.js](js/m-3sum.js) | [m-3sum.java](java/m-3sum.java) |
 | 9 | Container With Most Water | [m-containerwithmostwater.js](js/m-containerwithmostwater.js) | [m-containerwithmostwater.java](java/m-containerwithmostwater.java) |
@@ -108,8 +108,9 @@ Problems flagged for another pass before the interview.
 | 39 | Meeting Rooms II | [m-meetingrooms.js](js/m-meetingrooms.js) | [m-meetingrooms.java](java/m-meetingrooms.java) |
 | 40 | Rotate Array | [m-rotatearray.js](js/m-rotatearray.js) | [m-rotatearray.java](java/m-rotatearray.java) |
 | 41 | Kth Smallest Element in a BST | [m-kthsmallestbst.js](js/m-kthsmallestbst.js) | [m-kthsmallestbst.java](java/m-kthsmallestbst.java) |
+| 42 | Sort an Array | [m-mergesort.js](js/m-mergesort.js) | [m-mergesort.java](java/m-mergesort.java) |
 
-## Hard (9)
+## Hard (10)
 
 | # | Problem | JavaScript | Java |
 | --- | --- | --- | --- |
@@ -122,3 +123,4 @@ Problems flagged for another pass before the interview.
 | 7 | Merge k Sorted Lists | [h-mergeksortedlists.js](js/h-mergeksortedlists.js) | [h-mergeksortedlists.java](java/h-mergeksortedlists.java) |
 | 8 | Median of Two Sorted Arrays | [h-medianoftwosortedarrays.js](js/h-medianoftwosortedarrays.js) | [h-medianoftwosortedarrays.java](java/h-medianoftwosortedarrays.java) |
 | 9 | N-Queens | [h-nqueens.js](js/h-nqueens.js) | [h-nqueens.java](java/h-nqueens.java) |
+| 10 | Reverse Pairs | [h-reversepairs.js](js/h-reversepairs.js) | [h-reversepairs.java](java/h-reversepairs.java) |
